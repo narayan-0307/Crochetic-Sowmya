@@ -1,0 +1,105 @@
+.category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+  transition: all 0.5s ease;
+}
+
+.category-card:hover {
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
+}
+
+.category-card-image-container {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.category-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.category-card:hover .category-card-image {
+  transform: scale(1.1);
+}
+
+.category-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(111, 88, 63, 0.8),
+    rgba(111, 88, 63, 0.4) 50%,
+    transparent
+  );
+}
+
+.category-card-content {
+  position: absolute;
+  inset: 0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.category-card-title {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .category-card-title {
+    font-size: 1.875rem;
+  }
+}
+
+.category-card-description {
+  color: var(--color-primary-cream);
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.category-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category-product-count {
+  color: var(--color-primary-beige);
+  font-size: 0.875rem;
+}
+
+.category-arrow-wrapper {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.category-card:hover .category-arrow-wrapper {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.category-arrow-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: white;
+}

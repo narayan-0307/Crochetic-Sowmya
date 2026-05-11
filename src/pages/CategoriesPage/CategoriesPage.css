@@ -1,0 +1,135 @@
+/* CategoriesPage */
+.categories-page {
+  min-height: 100vh;
+  background-color: var(--color-primary-bg);
+}
+
+/* Hero */
+.categories-page-hero {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-beige),
+    var(--color-primary-nude),
+    var(--color-primary-cream)
+  );
+  padding: 4rem 0;
+}
+
+.categories-page-hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.categories-page-hero-content {
+  text-align: center;
+}
+
+.categories-page-hero-title {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-primary-text);
+  margin-bottom: 1rem;
+}
+
+.categories-page-hero-description {
+  color: var(--color-primary-brown);
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Grid Section */
+.categories-page-grid-section {
+  padding: 6rem 0;
+}
+
+.categories-page-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.categories-page-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Info Section */
+.categories-page-info {
+  padding: 6rem 0;
+  background-color: white;
+}
+
+.categories-page-info-content {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.categories-page-info-title {
+  font-family: var(--font-heading);
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--color-primary-text);
+  margin-bottom: 1.5rem;
+}
+
+.categories-page-info-description {
+  color: var(--color-primary-brown);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.categories-page-info-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--color-primary-text);
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.categories-page-info-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .categories-page-hero-container,
+  .categories-page-container {
+    padding: 0 2rem;
+  }
+
+  .categories-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .categories-page-hero-title {
+    font-size: 3.75rem;
+  }
+
+  .categories-page-grid {
+    gap: 2rem;
+  }
+
+  .categories-page-info-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .categories-page-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

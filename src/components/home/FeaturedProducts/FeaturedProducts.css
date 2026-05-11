@@ -1,0 +1,122 @@
+/* FeaturedProducts Section */
+.featured-products-section {
+  padding: 3rem 1rem;
+  background-color: var(--color-primary-bg);
+}
+
+.featured-products-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.featured-products-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.featured-products-subtitle {
+  display: inline-block;
+  color: var(--color-primary-brown);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.featured-products-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary-text);
+  margin-bottom: 1rem;
+}
+
+.featured-products-description {
+  color: var(--color-primary-brown);
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Slider */
+.featured-products-slider {
+  margin-bottom: 2rem;
+}
+
+.featured-products-swiper {
+  padding-bottom: 3rem;
+}
+
+/* View All Button */
+.featured-products-view-all {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.featured-products-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background-color: transparent;
+  color: var(--color-primary-text);
+  border: 2px solid var(--color-primary-text);
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.featured-products-btn:hover {
+  background-color: var(--color-primary-text);
+  color: white;
+}
+
+.featured-products-btn-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Swiper Custom Styles */
+.featured-products-swiper .swiper-button-next,
+.featured-products-swiper .swiper-button-prev {
+  color: var(--color-primary-text);
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.featured-products-swiper .swiper-button-next:after,
+.featured-products-swiper .swiper-button-prev:after {
+  font-size: 1.25rem;
+}
+
+.featured-products-swiper .swiper-pagination-bullet {
+  background-color: var(--color-primary-text);
+  opacity: 0.4;
+}
+
+.featured-products-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .featured-products-container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .featured-products-title {
+    font-size: 3rem;
+  }
+}
