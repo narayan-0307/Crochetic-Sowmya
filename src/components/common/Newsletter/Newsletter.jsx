@@ -39,8 +39,9 @@ const Newsletter = () => {
 
           <h2 className="newsletter-heading">Join Our Craft Circle</h2>
           <p className="newsletter-description">
-            Subscribe to receive exclusive updates, special offers, and
-            handcrafted inspiration delivered straight to your inbox.
+            Subscribe to receive exclusive crochet updates, new collection
+            launches, handmade inspiration, and special offers crafted just for
+            you.
           </p>
 
           <form onSubmit={handleSubmit} className="newsletter-form">

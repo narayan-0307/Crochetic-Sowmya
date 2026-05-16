@@ -1,17 +1,23 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Minus, Plus, X, ShoppingBag, Truck } from "lucide-react";
+import { Minus, Plus, X, ShoppingBag, MessageCircle } from "lucide-react";
 import { useCart } from "../../context/CartContext.jsx";
 import Button from "../../components/common/Button/Button.jsx";
 import "./CartPage.css";
 
 const CartPage = () => {
-  const { cartItems, removeFromCart, updateQuantity, getCartTotal, clearCart } =
-    useCart();
+  const { cartItems, removeFromCart, updateQuantity, clearCart } = useCart();
 
-  const subtotal = getCartTotal();
-  const shipping = subtotal > 100 ? 0 : 15;
-  const total = subtotal + shipping;
+  // WhatsApp configuration
+  const WHATSAPP_NUMBER = "1234567890"; // Replace with your WhatsApp number
+
+  const handleWhatsAppContact = () => {
+    const itemsList = cartItems
+      .map((item) => `• ${item.name} (Qty: ${item.quantity})`)
+      .join("%0A");
+    const message = `Hi! I'm interested in the following items:%0A%0A${itemsList}%0A%0APlease provide pricing and availability details.`;
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
+  };
 
   if (cartItems.length === 0) {
     return (
@@ -103,11 +109,6 @@ const CartPage = () => {
 
                     {/* Options */}
                     <div className="cart-item-options">
-                      {item.color && (
-                        <span className="cart-item-option">
-                          Color: {item.color}
-                        </span>
-                      )}
                       {item.size && (
                         <span className="cart-item-option">
                           Size: {item.size}
@@ -115,11 +116,8 @@ const CartPage = () => {
                       )}
                     </div>
 
-                    {/* Price and Quantity */}
+                    {/* Quantity Controls */}
                     <div className="cart-item-footer">
-                      <p className="cart-item-price">${item.price}</p>
-
-                      {/* Quantity Controls */}
                       <div className="cart-item-quantity">
                         <button
                           onClick={() =>
@@ -162,7 +160,7 @@ const CartPage = () => {
               </motion.div>
             </div>
 
-            {/* Order Summary */}
+            {/* WhatsApp Contact Summary */}
             <div className="cart-summary-wrapper">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -170,42 +168,33 @@ const CartPage = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="cart-summary"
               >
-                <h2 className="cart-summary-title">Order Summary</h2>
-
-                <div className="cart-summary-details">
-                  <div className="cart-summary-row">
-                    <span>Subtotal</span>
-                    <span className="cart-summary-value">
-                      ${subtotal.toFixed(2)}
-                    </span>
-                  </div>
-                  <div className="cart-summary-row">
-                    <span>Shipping</span>
-                    <span className="cart-summary-value">
-                      {shipping === 0 ? "FREE" : `$${shipping.toFixed(2)}`}
-                    </span>
-                  </div>
-                  {subtotal < 100 && (
-                    <div className="cart-shipping-notice">
-                      <Truck className="cart-shipping-icon" />
-                      <p className="cart-shipping-text">
-                        Add ${(100 - subtotal).toFixed(2)} more for free
-                        shipping!
-                      </p>
-                    </div>
-                  )}
-                  <div className="cart-summary-total">
-                    <div className="cart-summary-total-row">
-                      <span className="cart-summary-total-label">Total</span>
-                      <span className="cart-summary-total-value">
-                        ${total.toFixed(2)}
-                      </span>
-                    </div>
-                  </div>
+                <div className="cart-whatsapp-icon-wrapper">
+                  <MessageCircle className="cart-whatsapp-icon" />
                 </div>
 
-                <Button fullWidth size="lg" className="cart-checkout-btn">
-                  Proceed to Checkout
+                <h2 className="cart-summary-title">Complete Your Order</h2>
+                <p className="cart-summary-subtitle">
+                  Contact us on WhatsApp to get pricing details and complete
+                  your order
+                </p>
+
+                <div className="cart-summary-items-count">
+                  <span className="cart-items-count-label">
+                    Items Selected:
+                  </span>
+                  <span className="cart-items-count-value">
+                    {cartItems.length}
+                  </span>
+                </div>
+
+                <Button
+                  fullWidth
+                  size="lg"
+                  className="cart-whatsapp-btn"
+                  onClick={handleWhatsAppContact}
+                >
+                  <MessageCircle className="cart-whatsapp-btn-icon" />
+                  Contact on WhatsApp
                 </Button>
 
                 <Link to="/shop">
@@ -222,11 +211,11 @@ const CartPage = () => {
                 <div className="cart-trust-badges">
                   <div className="cart-trust-badge">
                     <div className="cart-trust-icon">✓</div>
-                    <span>Secure checkout</span>
+                    <span>Quick response guaranteed</span>
                   </div>
                   <div className="cart-trust-badge">
                     <div className="cart-trust-icon">✓</div>
-                    <span>Free returns within 30 days</span>
+                    <span>Custom pricing available</span>
                   </div>
                   <div className="cart-trust-badge">
                     <div className="cart-trust-icon">✓</div>

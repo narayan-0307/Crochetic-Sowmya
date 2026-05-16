@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from "../Navbar/Navbar.jsx";
 import Footer from "../Footer/Footer.jsx";
+import WhatsAppButton from "../../components/common/WhatsAppButton/WhatsAppButton.jsx";
 import "./MainLayout.css";
 
 const MainLayout = () => {
@@ -20,6 +21,7 @@ const MainLayout = () => {
         <Outlet />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

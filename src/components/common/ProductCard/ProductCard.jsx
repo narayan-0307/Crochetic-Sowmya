@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Heart, ShoppingCart, Eye } from "lucide-react";
+import { Heart, ShoppingCart, Eye, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useCart } from "../../../context/CartContext.jsx";
 import { useWishlist } from "../../../context/WishlistContext.jsx";
@@ -36,6 +36,14 @@ const ProductCard = ({ product, index = 0 }) => {
         category: product.category,
       });
     }
+  };
+
+  const handleWhatsAppOrder = (e) => {
+    e.preventDefault();
+    const whatsappNumber = "+919136863189"; // Replace with your WhatsApp number
+    const message = `Hi! I'm interested in ordering: ${product.name}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
@@ -126,6 +134,15 @@ const ProductCard = ({ product, index = 0 }) => {
               </div>
               <span className="product-reviews">({product.reviews})</span>
             </div>
+
+            <button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={handleWhatsAppOrder}
+              className="product-whatsapp-btn"
+            >
+              Order Now
+            </button>
 
             <div className="product-footer">
               {/* <p className="product-price">${product.price}</p> */}

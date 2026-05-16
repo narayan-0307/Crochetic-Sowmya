@@ -15,10 +15,14 @@ const CategoriesPage = () => {
             transition={{ duration: 0.6 }}
             className="categories-page-hero-content"
           >
-            <h1 className="categories-page-hero-title">Shop by Category</h1>
+            <h1 className="categories-page-hero-title">
+              Find the Perfect Crochet Creation
+            </h1>
             <p className="categories-page-hero-description">
-              Discover our diverse collection of handcrafted crochet pieces,
-              organized by category for your convenience.
+              Browse our beautifully handcrafted crochet categories and discover
+              unique designs made for every style and occasion. Whether you’re
+              looking for adorable gifts, stylish accessories, or cozy décor,
+              there’s something special waiting for you.
             </p>
           </motion.div>
         </div>

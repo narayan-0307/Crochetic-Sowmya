@@ -173,7 +173,7 @@ const ProductDetailsPage = () => {
               </div>
 
               {/* Price */}
-              <p className="productdetails-price">${product.price}</p>
+              {/* <p className="productdetails-price">${product.price}</p> */}
 
               {/* Description */}
               <p className="productdetails-description">
@@ -181,7 +181,7 @@ const ProductDetailsPage = () => {
               </p>
 
               {/* Colors */}
-              {product.colors && product.colors.length > 0 && (
+              {/* {product.colors && product.colors.length > 0 && (
                 <div className="productdetails-options-section">
                   <p className="productdetails-options-label">
                     Color: {selectedColor}
@@ -202,7 +202,7 @@ const ProductDetailsPage = () => {
                     ))}
                   </div>
                 </div>
-              )}
+              )} */}
 
               {/* Sizes */}
               {product.sizes && product.sizes.length > 0 && (
@@ -275,7 +275,7 @@ const ProductDetailsPage = () => {
               </div>
 
               {/* Features */}
-              <div className="productdetails-features">
+              {/* <div className="productdetails-features">
                 {features.map((feature, index) => (
                   <div key={index} className="productdetails-feature">
                     <div className="productdetails-feature-icon-wrapper">
@@ -291,7 +291,7 @@ const ProductDetailsPage = () => {
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>

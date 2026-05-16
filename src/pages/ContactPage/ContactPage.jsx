@@ -16,14 +16,39 @@ const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     subject: "",
     message: "",
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Thank you for your message! We will get back to you soon.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+
+    // Format WhatsApp message with form data
+    const whatsappMessage = `*New Contact Form Message*
+
+👤 *Name:* ${formData.name}
+📧 *Email:* ${formData.email}
+� *Phone:* ${formData.phone}
+�📝 *Subject:* ${formData.subject}
+
+💬 *Message:*
+${formData.message}`;
+
+    // WhatsApp phone number (remove spaces and special characters)
+    const phoneNumber = "919136863189"; // +91 91368 63189
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, "_blank");
+
+    // Reset form after opening WhatsApp
+    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
   };
 
   const handleChange = (e) => {
@@ -37,27 +62,27 @@ const ContactPage = () => {
     {
       icon: Mail,
       title: "Email Us",
-      info: "hello@crochetelegance.com",
-      description: "We reply within 24 hours",
+      info: "crocheticbysowmya@gmail.com",
+      // description: "We reply within 24 hours",
     },
     {
       icon: Phone,
       title: "Call Us",
-      info: "+1 (555) 123-4567",
-      description: "Mon-Fri, 9am-6pm EST",
+      info: "+91 91368 63189",
+      // description: "Mon-Fri, 9am-6pm EST",
     },
-    {
-      icon: MapPin,
-      title: "Visit Us",
-      info: "123 Craft Street, Brooklyn, NY 11201",
-      description: "By appointment only",
-    },
-    {
-      icon: Clock,
-      title: "Business Hours",
-      info: "Mon-Fri: 9am-6pm EST",
-      description: "Closed on weekends",
-    },
+    // {
+    //   icon: MapPin,
+    //   title: "Visit Us",
+    //   info: "123 Craft Street, Brooklyn, NY 11201",
+    //   description: "By appointment only",
+    // },
+    // {
+    //   icon: Clock,
+    //   title: "Business Hours",
+    //   info: "Mon-Fri: 9am-6pm EST",
+    //   description: "Closed on weekends",
+    // },
   ];
 
   const socialLinks = [
@@ -78,8 +103,8 @@ const ContactPage = () => {
           >
             <h1 className="contactpage-title">Get In Touch</h1>
             <p className="contactpage-subtitle">
-              Have a question or custom order inquiry? We'd love to hear from
-              you!
+              Tell us about your requirement, favorite design, custom idea, or
+              any questions you may have…
             </p>
           </motion.div>
         </div>
@@ -128,6 +153,22 @@ const ContactPage = () => {
                     required
                     className="contactpage-input"
                     placeholder="your@email.com"
+                  />
+                </div>
+
+                <div className="contactpage-form-field">
+                  <label htmlFor="phone" className="contactpage-label">
+                    Phone Number *
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    className="contactpage-input"
+                    placeholder="+91 98765 43210"
                   />
                 </div>
 
@@ -224,7 +265,7 @@ const ContactPage = () => {
       </section>
 
       {/* Map Section */}
-      <section className="contactpage-map-section">
+      {/* <section className="contactpage-map-section">
         <div className="contactpage-map-container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -240,7 +281,7 @@ const ContactPage = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

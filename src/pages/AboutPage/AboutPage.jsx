@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Heart, Users, Leaf, Award, Target, Sparkles } from "lucide-react";
 import "./AboutPage.css";
+import AboutImage from "../../assets/about-image.jpg";
 
 const AboutPage = () => {
   const values = [
@@ -8,53 +9,58 @@ const AboutPage = () => {
       icon: Heart,
       title: "Crafted with Love",
       description:
-        "Every piece is made with genuine passion and dedication to the art of crochet.",
+        "Every crochet piece is handmade with patience, care, and attention to detail, making each creation truly unique and meaningful.",
     },
     {
       icon: Award,
-      title: "Quality First",
+      title: "Premium Quality",
       description:
-        "We never compromise on quality, using only premium materials and expert techniques.",
+        "We use carefully selected yarns and quality materials to ensure softness, durability, and lasting beauty in every design.",
     },
     {
       icon: Leaf,
-      title: "Sustainable Practice",
+      title: "Sustainable Handmade",
       description:
-        "Committed to eco-friendly materials and processes that protect our planet.",
+        "Our creations support mindful craftsmanship and sustainable handmade practices that value quality over mass production.",
     },
     {
       icon: Users,
-      title: "Community Focused",
+      title: "Community & Creativity",
       description:
-        "Supporting artisans and preserving traditional handcraft skills.",
+        "We are proud to grow a creative handmade community that celebrates artistry, passion, and the timeless beauty of crochet.",
     },
   ];
 
-  const milestones = [
+  const artBehindCreation = [
     {
-      year: "2016",
-      title: "The Beginning",
-      description: "Started with a passion for crochet",
+      title: "Inspired by Creativity",
+      description:
+        "Every crochet piece begins with an idea inspired by everyday beauty, cozy living, and artistic expression.",
     },
     {
-      year: "2018",
-      title: "First Shop",
-      description: "Opened our online boutique",
+      title: "Carefully Handcrafted",
+      description:
+        "Each design is patiently handmade with attention to every stitch, texture, and finishing detail to create something truly special.",
     },
     {
-      year: "2020",
-      title: "Growing Team",
-      description: "Expanded to 10+ artisans",
+      title: "Designed for Everyday Charm",
+      description:
+        "From stylish accessories to elegant décor, our creations are made to bring warmth and personality into your daily life.",
     },
     {
-      year: "2022",
-      title: "Going Global",
-      description: "Shipping to 30+ countries",
+      title: "Made for Meaningful Moments",
+      description:
+        "Whether it's a thoughtful gift or a personal favorite, our crochet creations are designed to make moments feel memorable and heartfelt.",
     },
     {
-      year: "2026",
-      title: "Today",
-      description: "2000+ happy customers worldwide",
+      title: "Blending Tradition with Modern Style",
+      description:
+        "We combine the timeless beauty of traditional crochet techniques with modern aesthetics to create designs that feel both classic and contemporary.",
+    },
+    {
+      title: "More Than Handmade",
+      description:
+        "At Crochetic by Sowmya, every creation carries creativity, passion, and the beauty of handmade craftsmanship made specially for you.",
     },
   ];
 
@@ -75,16 +81,16 @@ const AboutPage = () => {
                 <span className="about-hero-badge-text">Est. 2016</span>
               </div>
               <h1 className="about-hero-title">
-                Our Story of
                 <span className="about-hero-title-gradient">
-                  Handcrafted Elegance
+                  Our Story of Handmade Passion & Creativity
                 </span>
               </h1>
               <p className="about-hero-description">
-                What began as a simple love for crochet has blossomed into a
-                thriving community of artisans creating beautiful, sustainable
-                handmade pieces that bring warmth and elegance to homes
-                worldwide.
+                What began as a simple love for crochet has grown into Crochetic
+                by Sowmya — a heartfelt journey of creativity, craftsmanship,
+                and handmade elegance. Every stitch reflects our passion for
+                creating meaningful crochet pieces that bring warmth, joy, and
+                timeless beauty into everyday life.
               </p>
             </motion.div>
 
@@ -95,7 +101,7 @@ const AboutPage = () => {
               className="about-hero-image-wrapper"
             >
               <img
-                src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=800&h=600&fit=crop"
+                src={AboutImage}
                 alt="About Us"
                 className="about-hero-image"
               />
@@ -119,13 +125,16 @@ const AboutPage = () => {
               <span className="about-mission-badge-text">Our Mission</span>
             </div>
             <h2 className="about-mission-title">
-              Preserving Tradition, Creating Beauty
+              Keeping Handmade Art Alive, One Stitch at a Time
             </h2>
             <p className="about-mission-description">
-              Our mission is to keep the art of traditional crochet alive while
-              creating modern, sustainable pieces that fit seamlessly into
-              contemporary lifestyles. We believe in the power of handmade goods
-              to bring joy, warmth, and authentic beauty into every home.
+              At Crochetic by Sowmya, our mission is to celebrate the beauty of
+              handmade crochet while blending tradition with modern creativity.
+              We believe handcrafted creations carry emotions, memories, and a
+              personal touch that machine-made products simply cannot replace.
+              Every design is thoughtfully created to inspire comfort,
+              happiness, and individuality while supporting sustainable handmade
+              craftsmanship and slow living.
             </p>
           </motion.div>
 
@@ -151,44 +160,36 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="about-timeline">
-        <div className="about-timeline-container">
+      {/* The Art Behind Every Creation */}
+      <section className="about-art-section">
+        <div className="about-art-container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="about-timeline-header"
+            className="about-art-header"
           >
-            <h2 className="about-timeline-title">Our Journey</h2>
-            <p className="about-timeline-subtitle">
-              From humble beginnings to a global handcraft community
+            <h2 className="about-art-title">The Art Behind Every Creation</h2>
+            <p className="about-art-subtitle">
+              Thoughtfully handcrafted crochet designs inspired by comfort,
+              creativity, and timeless handmade beauty.
             </p>
           </motion.div>
 
-          <div className="about-timeline-content">
-            {milestones.map((milestone, index) => (
+          <div className="about-art-grid">
+            {artBehindCreation.map((item, index) => (
               <motion.div
-                key={milestone.year}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="about-timeline-item"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="about-art-card"
               >
-                <div className="about-timeline-year">
-                  <p className="about-timeline-year-text">{milestone.year}</p>
-                </div>
-                <div className="about-timeline-dot" />
-                <div className="about-timeline-card">
-                  <h3 className="about-timeline-card-title">
-                    {milestone.title}
-                  </h3>
-                  <p className="about-timeline-card-description">
-                    {milestone.description}
-                  </p>
-                </div>
+                <div className="about-art-card-number">{index + 1}</div>
+                <h3 className="about-art-card-title">{item.title}</h3>
+                <p className="about-art-card-description">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -205,10 +206,16 @@ const AboutPage = () => {
             transition={{ duration: 0.6 }}
             className="about-team-header"
           >
-            <h2 className="about-team-title">Meet Our Artisans</h2>
+            <h2 className="about-team-title">
+              Meet the Creative Hands Behind Crochetic
+            </h2>
             <p className="about-team-description">
-              Our talented team of skilled crafters brings each piece to life
-              with dedication, expertise, and a genuine love for the craft.
+              Behind every handmade creation is a story of passion, patience,
+              and artistry. Our talented creators pour love and dedication into
+              every stitch, bringing unique crochet designs to life with care
+              and creativity. Each piece reflects the warmth of handmade
+              craftsmanship and the joy of creating something truly special for
+              you.
             </p>
           </motion.div>
         </div>

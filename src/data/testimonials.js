@@ -1,21 +1,15 @@
 export const testimonials = [
   {
     id: 1,
-    name: "Sarah Mitchell",
-    location: "Portland, OR",
     rating: 5,
-    text: "The baby blanket I ordered is absolutely beautiful! The quality is exceptional, and you can truly feel the love and care put into every stitch. My daughter adores it, and I know it will become a treasured keepsake.",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
-    product: "Handmade Cotton Baby Blanket",
-    date: "2026-04-20",
+    text: "Hi! I just wanted to let uh know that the crochet flowers are absolutely gorgeous! I am genuinely impressed with the craftsmanship and quality. Each flower is beautifully made, with great attention to detail and a lovely choice of colors. I can tell how much care and effort went into making them. My boyfriend loved them too and couldn't stop appreciating how cute and pretty they are. We both were really impressed with how unique and delicate they look. Thank you for creating something so special and for the smooth communication and delivery. You're genuinely talented and I have no doubt people are going to love your creations just as much as I did. I'll definitely be recommending your page to others and would love to order again soon!",
   },
   {
     id: 2,
     name: "Michael Chen",
     location: "San Francisco, CA",
     rating: 5,
-    text: "I purchased the macramé wall hanging for our living room, and it's become the centerpiece of our space. The craftsmanship is outstanding, and it arrived beautifully packaged. Highly recommend!",
+    text: "Hi Soumya, Received the lovely tulip keychain. Must say the quality is very premium and the weaving is very neat and tidy. Not to forget the cute packaging. Looking forward to more new creative work from your side..! Thank you",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
     product: "Boho Macramé Wall Hanging",
@@ -26,7 +20,7 @@ export const testimonials = [
     name: "Emma Rodriguez",
     location: "Austin, TX",
     rating: 5,
-    text: "The chunky knit throw is everything I hoped for and more! It's incredibly cozy, looks luxurious, and the neutral color goes perfectly with my decor. Worth every penny!",
+    text: "Sowmy didi, I just wanted to take a moment to truly appreciate your beautiful crochet bouquet. The detailing, the petals, the flowers-everything was crafted so perfectly. You can really see the effort, patience, and love you've put into it. Both my teacher and I absolutely loved it! It made the moment even more special and memorable. Your work is genuinely so creative and heart-touching. Thank you for creating something so unique and meaningful. Keep shining with your amazing talent!",
     image:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop",
     product: "Cozy Chunky Knit Throw Blanket",
@@ -37,53 +31,11 @@ export const testimonials = [
     name: "David Park",
     location: "Seattle, WA",
     rating: 5,
-    text: "Bought the market tote as a gift for my wife, and she uses it every day! It's sturdy, stylish, and eco-friendly. She's already asking me to order another one in a different color.",
+    text: "Hey Sowmya, I just wanted to say a big thank you for the beautiful bow you made for me. It means so much that you took the time and effort to crochet something so special. The design is adorable and the detailing is just perfect! I can truly see the love and care you put into it. You're so talented and creative - I'll cherish this gift always!",
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop",
     product: "Handcrafted Market Tote Bag",
     date: "2026-04-12",
-  },
-  {
-    id: 5,
-    name: "Jennifer Taylor",
-    location: "Boston, MA",
-    rating: 5,
-    text: "The attention to detail is remarkable! I ordered custom cushion covers, and they're exactly what I envisioned. The quality far exceeds anything I've found in stores. This is true craftsmanship.",
-    image:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop",
-    product: "Vintage Crochet Cushion Cover",
-    date: "2026-04-10",
-  },
-  {
-    id: 6,
-    name: "Robert Anderson",
-    location: "Denver, CO",
-    rating: 5,
-    text: "I've ordered multiple items as gifts, and every recipient has been thrilled! The packaging is beautiful, and the products themselves are works of art. This is my go-to shop for special occasions.",
-    image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop",
-    date: "2026-04-08",
-  },
-  {
-    id: 7,
-    name: "Lisa Wong",
-    location: "Los Angeles, CA",
-    rating: 5,
-    text: "The alpaca wool scarf is absolutely divine! So soft and warm, and the craftsmanship is impeccable. I've received countless compliments every time I wear it.",
-    image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&h=200&fit=crop",
-    product: "Soft Alpaca Wool Scarf",
-    date: "2026-04-05",
-  },
-  {
-    id: 8,
-    name: "James Wilson",
-    location: "Chicago, IL",
-    rating: 5,
-    text: "Outstanding customer service and even better products! The team was so helpful in choosing the right pieces for my home. Everything arrived perfectly, and I couldn't be happier.",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop",
-    date: "2026-04-02",
   },
 ];
 

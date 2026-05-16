@@ -1,133 +1,119 @@
 export const blogPosts = [
   {
     id: 1,
-    title: "The Art of Crochet: A Timeless Craft",
+    title: "The Beauty of Handmade Crochet in a Fast-Paced World",
     excerpt:
-      "Discover the rich history and enduring appeal of crochet, from traditional techniques to modern interpretations.",
-    content: `Crochet has been beloved for generations, passed down through families as both an art form and a practical skill. Today, this timeless craft is experiencing a renaissance, with modern crafters reimagining traditional patterns and creating stunning contemporary pieces.
+      "Discover how handmade crochet brings warmth, comfort, and meaning into modern living through timeless craftsmanship and creativity.",
+    content: `In a world filled with fast-changing trends and mass-produced products, handmade crochet carries something truly meaningful. Every stitch reflects patience, creativity, and the beauty of creating something by hand.
 
-The beauty of crochet lies in its versatility. From delicate lace doilies to chunky blankets, the possibilities are endless. Each stitch tells a story, connecting us to generations of makers who came before us.
+Crochet is more than yarn and patterns — it is an art form filled with warmth and emotion. Whether it’s a cozy plushie, an elegant bouquet, or a decorative accessory, handmade creations carry a personal touch that machines simply cannot recreate.
 
-In this post, we'll explore the fundamentals of crochet, essential tools, and how to get started on your handmade journey. Whether you're interested in creating home decor, fashion accessories, or gifts for loved ones, crochet offers something for everyone.
+One of the most beautiful things about crochet is the time and care behind every piece. Each creation begins with a simple idea and slowly transforms into something special through dedication and craftsmanship.
 
-The meditative nature of crochet also provides mental health benefits, offering a calming escape from our fast-paced world. Many crafters find that the repetitive motions and focus required for crochet help reduce stress and anxiety.`,
-    author: "Emma Richardson",
+Today, crochet has become a part of modern lifestyles because people value authenticity, comfort, and handmade beauty more than ever before. Handmade décor and accessories bring personality into everyday living while creating memorable moments for loved ones.
+
+At Crochetic by Sowmya, every piece is thoughtfully handcrafted to celebrate creativity, comfort, and timeless elegance.`,
+    author: "Sowmya",
     date: "2026-04-15",
     category: "Tutorials",
-    image:
-      "https://images.unsplash.com/photo-1574634534894-89d7576c8259?w=1200&h=800&fit=crop",
+    image: new URL("../assets/blogs/crochetic-blog-1.jpg", import.meta.url)
+      .href,
     readTime: "5 min read",
-    tags: ["crochet", "beginner", "tutorial", "craft"],
+    tags: ["crochet", "handmade", "craftsmanship", "creativity"],
   },
+
   {
     id: 2,
-    title: "Sustainable Crafting: Choosing Eco-Friendly Yarns",
+    title: "Creating Cozy Spaces with Handmade Crochet Décor",
     excerpt:
-      "Learn about sustainable yarn options and how to make environmentally conscious choices in your crochet projects.",
-    content: `As crafters, we have the power to make choices that benefit both our projects and our planet. Choosing eco-friendly yarns is a wonderful way to create beautiful pieces while minimizing environmental impact.
+      "Learn how handmade crochet décor can transform your home into a warm, stylish, and comforting space.",
+    content: `A beautiful home is not only about furniture and colors — it is about creating a space that feels warm, personal, and comforting. Handmade crochet décor brings timeless charm and softness into every corner of your home.
 
-Organic cotton, bamboo, hemp, and recycled fibers are excellent sustainable options. These materials are grown or produced using methods that reduce water consumption, avoid harmful pesticides, and minimize waste.
+From textured cushion covers to elegant baskets and wall hangings, crochet pieces create a cozy atmosphere while adding artistic beauty to modern interiors.
 
-Natural, undyed fibers offer beautiful neutral tones perfect for elegant, minimalist designs. When you do choose dyed yarns, look for those using natural or low-impact dyes.
+Neutral crochet tones blend perfectly with minimalist spaces, while colorful handmade accents add personality and creativity. Small handmade touches can completely change the feeling of a room without overwhelming the décor.
 
-By selecting sustainable materials, you're not only creating beautiful handmade items but also supporting ethical practices and contributing to a healthier planet. Your choices matter, and they make each piece you create even more meaningful.`,
-    author: "Sophie Martinez",
+Unlike factory-made items, handmade crochet carries emotional value. Every stitch tells a story of patience, creativity, and craftsmanship, making each piece feel truly meaningful.
+
+At Crochetic by Sowmya, we believe handmade décor should feel both elegant and comforting. Every crochet creation is carefully designed to bring warmth and timeless beauty into your everyday living spaces.`,
+    author: "Sowmya",
     date: "2026-04-22",
-    category: "Sustainability",
-    image:
-      "https://images.unsplash.com/photo-1515444744559-7be63e1600de?w=1200&h=800&fit=crop",
-    readTime: "6 min read",
-    tags: ["sustainability", "eco-friendly", "yarn", "environment"],
+    category: "Home Decor",
+    image: new URL("../assets/blogs/crochetic-blog-2.jpg", import.meta.url)
+      .href,
+    readTime: "4 min read",
+    tags: ["home-decor", "cozy", "handmade", "interior"],
   },
+
   {
     id: 3,
-    title: "Creating Your Perfect Cozy Corner",
+    title: "Why Handmade Crochet Gifts Feel More Special",
     excerpt:
-      "Transform any space into a relaxing sanctuary with handmade crochet pieces and thoughtful design.",
-    content: `Everyone deserves a cozy corner in their home—a personal sanctuary where you can unwind, read, or simply enjoy a quiet moment. Handmade crochet pieces are perfect for creating that warm, inviting atmosphere.
+      "Explore why handcrafted crochet gifts create meaningful memories and heartfelt connections for every occasion.",
+    content: `The most memorable gifts are often the ones made with thoughtfulness and love. Handmade crochet gifts carry a unique emotional value because every piece is carefully crafted by hand.
 
-Start with a comfortable chair or floor cushion, then layer on soft textures. A chunky knit throw blanket adds instant coziness, while decorative cushions in complementary colors create visual interest and comfort.
+From adorable plushies to customized bouquets and accessories, crochet creations feel personal, warm, and unforgettable. No two handmade pieces are exactly the same, making every gift truly one of a kind.
 
-Consider adding a handmade wall hanging or plant hanger to bring vertical interest to your space. Natural, neutral tones create a calming environment, while pops of color can reflect your personality.
+Crochet gifts are perfect for birthdays, anniversaries, baby showers, festive celebrations, and special moments shared with loved ones. The beauty of handmade gifting lies in the emotions and memories attached to every creation.
 
-Soft lighting is essential—think warm-toned lamps or string lights. Add a small side table for your tea or book, and you've created the perfect retreat within your own home.
+Another wonderful part of crochet gifting is personalization. Colors, designs, and styles can be customized to reflect someone’s personality, making the gift even more meaningful.
 
-Remember, your cozy corner should reflect your personal style and meet your needs. Whether it's a reading nook, meditation space, or crafting area, make it uniquely yours.`,
-    author: "Lily Anderson",
+At Crochetic by Sowmya, every crochet creation is designed to celebrate love, happiness, and heartfelt moments through handmade artistry.`,
+    author: "Sowmya",
     date: "2026-04-28",
-    category: "Home Decor",
-    image:
-      "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1200&h=800&fit=crop",
-    readTime: "4 min read",
-    tags: ["home-decor", "cozy", "interior", "design"],
+    category: "Gift Ideas",
+    image: new URL("../assets/blogs/crochetic-blog-3.jpg", import.meta.url)
+      .href,
+    readTime: "6 min read",
+    tags: ["gifts", "handmade", "crochet-gifts", "personalized"],
   },
+
   {
     id: 4,
-    title: "Handmade Baby Gifts: Thoughtful and Timeless",
+    title: "The Calm and Comfort of Crochet Art",
     excerpt:
-      "Why handcrafted baby items make the most meaningful gifts, and what to create for the little ones in your life.",
-    content: `When welcoming a new baby, handmade gifts carry a special significance. Each stitch represents time, love, and care—something that can't be replicated by mass-produced items.
+      "Discover how crochet brings creativity, relaxation, and mindful living into everyday life.",
+    content: `Crochet is not only a creative craft — it is also a calming experience that brings mindfulness and comfort into daily life. The gentle rhythm of stitching allows the mind to slow down and focus on the present moment.
 
-Crochet baby blankets are classic gifts that become cherished keepsakes. Choose soft, hypoallergenic yarns in gentle colors, and consider personalizing with the baby's initials or birth date.
+Many people find crochet relaxing because it creates a peaceful balance between creativity and focus. Watching yarn slowly transform into something beautiful feels rewarding and satisfying.
 
-Baby booties, hats, and stuffed toys are also wonderful options. They're practical, adorable, and small enough to complete relatively quickly—perfect if you're working on a deadline!
+In today’s fast-moving world, crochet encourages slower and more meaningful experiences. It teaches patience, attention to detail, and the joy of creating something with your own hands.
 
-When creating baby items, safety is paramount. Ensure all pieces are securely stitched with no small parts that could pose a choking hazard. Wash your finished items before gifting to ensure softness and cleanliness.
+Beyond creativity, crochet also creates emotional connections. Handmade pieces often become treasured keepsakes because they carry time, effort, and personal meaning within every stitch.
 
-Handmade baby gifts often become treasured heirlooms, passed down through generations. The time and thought you invest in creating them makes them truly priceless.`,
-    author: "Clara Thompson",
+At Crochetic by Sowmya, crochet is more than handmade art — it is a celebration of creativity, mindfulness, and heartfelt craftsmanship.`,
+    author: "Sowmya",
     date: "2026-05-02",
-    category: "Baby & Kids",
-    image:
-      "https://images.unsplash.com/photo-1519689373023-dd07c7988e90?w=1200&h=800&fit=crop",
+    category: "Sustainability",
+    image: new URL("../assets/blogs/crochetic-blog-4.jpg", import.meta.url)
+      .href,
     readTime: "5 min read",
-    tags: ["baby", "gifts", "handmade", "thoughtful"],
+    tags: ["crochet", "mindfulness", "creative-living", "handmade"],
   },
+
   {
     id: 5,
-    title: "Macramé Magic: Beyond the Basics",
+    title: "Timeless Crochet Accessories for Everyday Style",
     excerpt:
-      "Explore advanced macramé techniques to create stunning wall hangings, plant hangers, and decorative pieces.",
-    content: `Macramé, the art of knotting cord into decorative patterns, has captivated crafters for centuries. While basic knots are easy to learn, mastering advanced techniques opens up a world of creative possibilities.
+      "Explore how handmade crochet accessories add elegance, charm, and individuality to modern fashion.",
+    content: `Fashion becomes more meaningful when it includes handmade details filled with creativity and personality. Crochet accessories bring timeless beauty that blends naturally with modern everyday style.
 
-The square knot, half-hitch, and lark's head are foundational, but combining them in innovative ways creates intricate, eye-catching designs. Experiment with different cord thicknesses and materials to achieve various textures and effects.
+From elegant handbags and hair accessories to cute keychains and statement pieces, crochet designs add softness, texture, and artistic charm to any outfit.
 
-Geometric patterns are particularly popular in contemporary macramé. Clean lines and symmetrical designs complement modern interiors beautifully. Don't be afraid to mix traditional and contemporary elements in your work.
+One of the reasons crochet accessories remain timeless is their versatility. They can be styled casually for everyday looks or paired beautifully with festive outfits for special occasions.
 
-For plant hangers, consider the weight of your pots and ensure your knots are secure. Wall hangings offer more creative freedom—play with asymmetry, fringe lengths, and negative space.
+Handmade crochet fashion also supports mindful craftsmanship. Instead of fast-changing trends, crochet celebrates slow fashion where creativity, quality, and artistry matter most.
 
-Practice is key to mastering macramé. Start with simple patterns and gradually work your way up to more complex designs. Soon you'll be creating stunning pieces that showcase your unique style.`,
-    author: "Isabella Garcia",
-    date: "2026-05-05",
-    category: "Tutorials",
-    image:
-      "https://images.unsplash.com/photo-1595814432314-90095f342694?w=1200&h=800&fit=crop",
-    readTime: "7 min read",
-    tags: ["macramé", "tutorial", "advanced", "techniques"],
-  },
-  {
-    id: 6,
-    title: "The Perfect Gift Guide: Handmade for Every Occasion",
-    excerpt:
-      "Find the perfect handcrafted gift for birthdays, weddings, housewarmings, and more.",
-    content: `Handmade gifts show thoughtfulness and care that store-bought items simply can't match. Here's our guide to choosing the perfect crochet piece for any occasion.
+Every stitch reflects patience and craftsmanship, making each accessory feel personal and thoughtfully designed.
 
-For Weddings: Elegant table runners, decorative pillows, or custom blankets in the couple's chosen colors make beautiful, practical gifts they'll treasure.
-
-For Baby Showers: Soft blankets, booties, and stuffed animals are always appreciated. Choose hypoallergenic yarns in gentle, neutral tones or classic baby colors.
-
-For Housewarmings: Wall hangings, throw blankets, and decorative baskets help new homeowners make their space feel cozy and personalized.
-
-For Birthdays: Consider the recipient's style—bohemian friends might love a macramé plant hanger, while someone with classic tastes might prefer a delicate lace shawl.
-
-The beauty of handmade gifts is their uniqueness. Each piece is one-of-a-kind, making your gift truly special and memorable.`,
-    author: "Olivia Bennett",
+At Crochetic by Sowmya, our handmade accessories are created to celebrate individuality, elegance, and timeless crochet artistry.`,
+    author: "Sowmya",
     date: "2026-05-08",
-    category: "Gift Ideas",
-    image:
-      "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=1200&h=800&fit=crop",
+    category: "Tutorials",
+    image: new URL("../assets/blogs/crochetic-blog-5.jpg", import.meta.url)
+      .href,
     readTime: "6 min read",
-    tags: ["gifts", "occasions", "guide", "handmade"],
+    tags: ["crochet-fashion", "accessories", "handmade", "style"],
   },
 ];
 
@@ -135,6 +121,5 @@ export const blogCategories = [
   "Tutorials",
   "Sustainability",
   "Home Decor",
-  "Baby & Kids",
   "Gift Ideas",
 ];

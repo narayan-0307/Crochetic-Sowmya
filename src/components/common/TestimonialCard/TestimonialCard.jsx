@@ -26,11 +26,11 @@ const TestimonialCard = ({ testimonial, index = 0 }) => {
 
       <p className="testimonial-text">"{testimonial.text}"</p>
 
-      {testimonial.product && (
+      {/* {testimonial.product && (
         <p className="testimonial-product">Product: {testimonial.product}</p>
-      )}
+      )} */}
 
-      <div className="testimonial-author">
+      {/* <div className="testimonial-author">
         <img
           src={testimonial.image}
           alt={testimonial.name}
@@ -40,7 +40,7 @@ const TestimonialCard = ({ testimonial, index = 0 }) => {
           <h4 className="testimonial-author-name">{testimonial.name}</h4>
           <p className="testimonial-author-location">{testimonial.location}</p>
         </div>
-      </div>
+      </div> */}
     </motion.div>
   );
 };

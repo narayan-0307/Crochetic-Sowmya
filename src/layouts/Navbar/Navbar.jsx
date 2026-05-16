@@ -71,14 +71,14 @@ const Navbar = () => {
           {/* Right Icons */}
           <div className="navbar-icons">
             {/* Search */}
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setSearchOpen(!searchOpen)}
               className="navbar-icon-btn navbar-icon-search"
             >
               <Search className="navbar-icon" />
-            </motion.button>
+            </motion.button> */}
 
             {/* Wishlist */}
             <Link to="/wishlist">
@@ -113,13 +113,13 @@ const Navbar = () => {
             </Link>
 
             {/* User Icon */}
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="navbar-icon-btn navbar-icon-user"
             >
               <User className="navbar-icon" />
-            </motion.button>
+            </motion.button> */}
 
             {/* Mobile Menu Button */}
             <motion.button

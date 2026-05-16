@@ -33,14 +33,14 @@ const BlogPage = () => {
             transition={{ duration: 0.6 }}
             className="blog-hero-content"
           >
-            <h1 className="blog-hero-title">Our Blog</h1>
+            <h1 className="blog-hero-title">Stories Woven with Creativity</h1>
             <p className="blog-hero-description">
-              Tips, tutorials, and inspiration for crochet enthusiasts and home
-              decor lovers
+              Explore creative crochet ideas, cozy living inspiration, and
+              beautiful handmade moments from Crochetic by Sowmya.
             </p>
 
             {/* Search Bar */}
-            <div className="blog-search-wrapper">
+            {/* <div className="blog-search-wrapper">
               <Search className="blog-search-icon" />
               <input
                 type="text"
@@ -49,7 +49,7 @@ const BlogPage = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="blog-search-input"
               />
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </section>
@@ -57,7 +57,7 @@ const BlogPage = () => {
       {/* Category Filter & Blog Grid */}
       <section className="blog-content">
         <div className="blog-container">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -76,9 +76,8 @@ const BlogPage = () => {
                 {category}
               </button>
             ))}
-          </motion.div>
+          </motion.div> */}
 
-          {/* Blog Grid */}
           {filteredPosts.length > 0 ? (
             <div className="blog-grid">
               {filteredPosts.map((post, index) => (

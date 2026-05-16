@@ -69,11 +69,11 @@
 
 /* Article Section */
 .singleblog-section {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 
 .singleblog-content {
-  max-width: 56rem;
+  max-width: 61rem;
   margin: 0 auto;
   padding: 0 1.5rem;
 }

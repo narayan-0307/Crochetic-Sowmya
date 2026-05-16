@@ -37,7 +37,7 @@
 .shop-subtitle {
   color: var(--brown);
   font-size: 1.125rem;
-  max-width: 42rem;
+  max-width: 64rem;
   margin: 0 auto;
 }
 
@@ -128,7 +128,8 @@
 
 .shop-filter-btn-active {
   background: var(--text-primary);
-  color: white;
+  color: #6f583f;
+  font-weight: 800;
 }
 
 /* Price Range */
@@ -214,7 +215,8 @@
 
 .shop-view-btn-active {
   background: var(--text-primary);
-  color: white;
+  color: #6f583f;
+  font-weight: 800;
 }
 
 .shop-view-icon {

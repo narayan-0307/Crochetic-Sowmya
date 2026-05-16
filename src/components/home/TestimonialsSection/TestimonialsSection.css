@@ -72,7 +72,7 @@
 }
 
 /* Swiper Custom Styles */
-.testimonials-swiper .swiper-button-next,
+/* .testimonials-swiper .swiper-button-next,
 .testimonials-swiper .swiper-button-prev {
   color: var(--color-primary-text);
   width: 40px;
@@ -85,7 +85,7 @@
 .testimonials-swiper .swiper-button-next:after,
 .testimonials-swiper .swiper-button-prev:after {
   font-size: 1.25rem;
-}
+} */
 
 .testimonials-swiper .swiper-pagination-bullet {
   background-color: var(--color-primary-text);

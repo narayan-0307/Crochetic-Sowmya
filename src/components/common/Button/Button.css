@@ -59,8 +59,8 @@
 }
 
 .button-lg {
-  padding: 1rem 2.5rem;
-  font-size: 1.125rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
 }
 
 /* Full Width */
@@ -76,4 +76,19 @@
 .button:disabled:hover {
   transform: none;
   box-shadow: none;
+}
+
+/* Responsive button sizes */
+@media (min-width: 480px) {
+  .button-lg {
+    padding: 1rem 2rem;
+    font-size: 1.0625rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .button-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+  }
 }

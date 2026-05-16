@@ -64,8 +64,11 @@ const ShopPage = () => {
           >
             <h1 className="shop-title">Shop Collection</h1>
             <p className="shop-subtitle">
-              Explore our curated selection of handcrafted crochet pieces, each
-              made with love and attention to detail.
+              Explore our thoughtfully curated collection of handmade crochet
+              creations designed to add warmth, beauty, and personality to your
+              everyday life. From elegant accessories to cozy home décor, every
+              piece is carefully crafted with passion, creativity, and timeless
+              charm.
             </p>
           </motion.div>
         </div>

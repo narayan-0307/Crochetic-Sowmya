@@ -10,32 +10,39 @@ import {
 } from "lucide-react";
 import "./Footer.css";
 
+import logo from "../../assets/images/logo/logo.webp";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
+    { name: "Home", path: "/" },
+    { name: "Shop", path: "/shop" },
+    { name: "Collections", path: "/categories" },
     { name: "About Us", path: "/about" },
-    { name: "Shop All", path: "/shop" },
-    { name: "Categories", path: "/categories" },
-    { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
-    { name: "FAQ", path: "/faq" },
   ];
 
   const customerService = [
-    { name: "Shipping Information", path: "/faq" },
-    { name: "Returns & Exchanges", path: "/faq" },
-    { name: "Order Tracking", path: "/contact" },
-    { name: "Size Guide", path: "/faq" },
-    { name: "Care Instructions", path: "/faq" },
-    { name: "Testimonials", path: "/testimonials" },
+    { name: "Keychains", path: "/faq" },
+    { name: "Teddy", path: "/faq" },
+    { name: "Bouquet", path: "/contact" },
+    { name: "Hair Accessories", path: "/faq" },
+    { name: "Mobile accessories", path: "/faq" },
+    { name: "Couple sections", path: "/testimonials" },
   ];
 
   const socialLinks = [
-    { icon: Share2, href: "https://instagram.com", label: "Social Media" },
-    { icon: MessageCircle, href: "https://pinterest.com", label: "Community" },
-    { icon: Mail, href: "mailto:info@crochetelegance.com", label: "Email" },
-    { icon: Heart, href: "#", label: "Follow Us" },
+    {
+      icon: Share2,
+      href: "https://www.instagram.com/crochetic_by_sowmya/",
+      label: "Instagram",
+    },
+    {
+      icon: MessageCircle,
+      href: "https://wa.me/919136863189",
+      label: "WhatsApp",
+    },
   ];
 
   return (
@@ -53,13 +60,19 @@ const Footer = () => {
             >
               <div className="footer-logo">
                 <div className="footer-logo-icon">
-                  <span className="footer-logo-letter">C</span>
+                  <img
+                    src={logo}
+                    alt="Crochetic By Sowmya Logo"
+                    className="footer-logo-image"
+                  />
                 </div>
-                <h3 className="footer-brand-name">Crochet Elegance</h3>
+                <h3 className="footer-brand-name">Crochetic By Sowmya</h3>
               </div>
               <p className="footer-description">
-                Handcrafted with love, designed with care. Each piece tells a
-                story of artisanal craftsmanship and timeless elegance.
+                <strong>Crochetic by Sowmya </strong> creates handmade crochet
+                designs crafted with passion, creativity, and timeless elegance.
+                Every piece is thoughtfully made to bring warmth and beauty into
+                everyday living.
               </p>
               {/* Social Links */}
               <div className="footer-social-links">
@@ -107,7 +120,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <h4 className="footer-section-title">Customer Service</h4>
+            <h4 className="footer-section-title">Our Products</h4>
             <ul className="footer-links-list">
               {customerService.map((link) => (
                 <li key={link.name}>
@@ -128,7 +141,7 @@ const Footer = () => {
           >
             <h4 className="footer-section-title">Get In Touch</h4>
             <ul className="footer-contact-list">
-              <li className="footer-contact-item">
+              {/* <li className="footer-contact-item">
                 <MapPin className="footer-contact-icon" />
                 <span>
                   123 Craft Street
@@ -137,15 +150,15 @@ const Footer = () => {
                   <br />
                   United States
                 </span>
-              </li>
+              </li> */}
               <li className="footer-contact-item footer-contact-link">
                 <Phone className="footer-contact-icon" />
-                <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                <a href="tel:+15551234567">+91 91368 63189</a>
               </li>
               <li className="footer-contact-item footer-contact-link">
                 <Mail className="footer-contact-icon" />
-                <a href="mailto:hello@crochetelegance.com">
-                  hello@crochetelegance.com
+                <a href="mailto:crocheticbysowmya@gmail.com">
+                  crocheticbysowmya@gmail.com
                 </a>
               </li>
             </ul>
@@ -153,7 +166,7 @@ const Footer = () => {
         </div>
 
         {/* Payment Icons */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -167,7 +180,7 @@ const Footer = () => {
               Secure Checkout • Free Shipping on Orders Over $100
             </p>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Bottom Bar */}
         <motion.div
@@ -177,17 +190,18 @@ const Footer = () => {
           className="footer-bottom"
         >
           <p className="footer-copyright">
-            © {currentYear} Crochet Elegance. All rights reserved.
+            © {currentYear} Crochetic by Sowmya — Handmade with love and
+            creativity.
           </p>
           <p className="footer-made-with-love">
-            Handcrafted with <Heart className="footer-heart-icon" /> by artisans
+            Handcrafted with <Heart className="footer-heart-icon" /> by Sowmya
           </p>
           <div className="footer-legal-links">
-            <Link to="/faq" className="footer-legal-link">
+            <Link to="#" className="footer-legal-link">
               Privacy Policy
             </Link>
             <span className="footer-legal-separator">•</span>
-            <Link to="/faq" className="footer-legal-link">
+            <Link to="#" className="footer-legal-link">
               Terms of Service
             </Link>
           </div>

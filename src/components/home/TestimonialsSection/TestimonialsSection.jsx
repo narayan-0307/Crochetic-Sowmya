@@ -44,7 +44,7 @@ const TestimonialsSection = () => {
           className="testimonials-slider"
         >
           <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
+            modules={[Pagination]}
             spaceBetween={30}
             slidesPerView={1}
             navigation
@@ -52,7 +52,7 @@ const TestimonialsSection = () => {
             autoplay={{ delay: 5000, disableOnInteraction: false }}
             breakpoints={{
               640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
+              1024: { slidesPerView: 2, spaceBetween: 40 },
             }}
             className="testimonials-swiper"
           >

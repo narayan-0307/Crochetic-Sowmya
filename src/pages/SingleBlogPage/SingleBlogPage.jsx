@@ -123,10 +123,11 @@ const SingleBlogPage = () => {
             <div>
               <h3 className="singleblog-author-title">About {post.author}</h3>
               <p className="singleblog-author-bio">
-                Passionate crochet artist and writer sharing insights,
-                tutorials, and inspiration for handcrafted elegance. With years
-                of experience in the craft, bringing you the best tips and
-                techniques.
+                Creative founder of Crochetic by Sowmya, sharing a love for
+                handmade crochet through meaningful designs, thoughtful
+                inspiration, and timeless craftsmanship. Every creation is made
+                with passion, creativity, and attention to detail to bring
+                warmth, beauty, and happiness into everyday life.
               </p>
             </div>
           </motion.div>

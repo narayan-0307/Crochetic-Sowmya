@@ -1,16 +1,92 @@
-import { motion } from "framer-motion";
-import { Share2 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Share2, Play, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
 import "./InstagramSection.css";
 
+// Import all review images and videos
+import review1 from "../../../assets/images/reviews/reviews-1.jpg";
+import review2 from "../../../assets/images/reviews/reviews-2.mp4";
+import review3 from "../../../assets/images/reviews/reviews-3.mp4";
+import review4 from "../../../assets/images/reviews/reviews-4.mp4";
+import review5 from "../../../assets/images/reviews/reviews-5.mp4";
+import review6 from "../../../assets/images/reviews/reviews-6.mp4";
+import review7 from "../../../assets/images/reviews/reviews-7.mp4";
+import review8 from "../../../assets/images/reviews/reviews-8.mp4";
+import review9 from "../../../assets/images/reviews/reviews-9.mp4";
+import review10 from "../../../assets/images/reviews/reviews-10.mp4";
+import review11 from "../../../assets/images/reviews/reviews-11.jpeg";
+import review12 from "../../../assets/images/reviews/reviews-12.jpeg";
+import review13 from "../../../assets/images/reviews/reviews-13.jpeg";
+import review14 from "../../../assets/images/reviews/reviews-14.jpeg";
+import review15 from "../../../assets/images/reviews/reviews-15.jpeg";
+import review16 from "../../../assets/images/reviews/reviews-16.jpeg";
+import review17 from "../../../assets/images/reviews/reviews-17.jpeg";
+import review18 from "../../../assets/images/reviews/reviews-18.jpeg";
+
 const InstagramSection = () => {
-  const instagramImages = [
-    "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1595814432314-90095f342694?w=400&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=400&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1595503240812-7286dafaddc1?w=400&h=400&fit=crop",
+  const reviewMedia = [
+    { src: review1, type: "image" },
+    { src: review2, type: "video" },
+    { src: review3, type: "video" },
+    { src: review4, type: "video" },
+    { src: review5, type: "video" },
+    { src: review6, type: "video" },
+    { src: review7, type: "video" },
+    { src: review8, type: "video" },
+    { src: review9, type: "video" },
+    { src: review10, type: "video" },
+    { src: review11, type: "image" },
+    { src: review12, type: "image" },
+    { src: review13, type: "image" },
+    { src: review14, type: "image" },
+    { src: review15, type: "image" },
+    { src: review16, type: "image" },
+    { src: review17, type: "image" },
+    { src: review18, type: "image" },
   ];
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const videoRef = useRef(null);
+
+  // Open modal
+  const openModal = (index) => {
+    setCurrentIndex(index);
+    setModalOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  // Close modal
+  const closeModal = () => {
+    setModalOpen(false);
+    document.body.style.overflow = "auto";
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
+  };
+
+  // Navigate in modal
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % reviewMedia.length);
+  };
+
+  const goToPrev = () => {
+    setCurrentIndex(
+      (prev) => (prev - 1 + reviewMedia.length) % reviewMedia.length,
+    );
+  };
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!modalOpen) return;
+      if (e.key === "ArrowRight") goToNext();
+      if (e.key === "ArrowLeft") goToPrev();
+      if (e.key === "Escape") closeModal();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [modalOpen]);
 
   return (
     <section className="instagram-section">
@@ -25,41 +101,51 @@ const InstagramSection = () => {
         >
           <div className="instagram-badge">
             <Share2 className="instagram-badge-icon" />
-            <span className="instagram-badge-text">@CrochetElegance</span>
+            <span className="instagram-badge-text">Customer Reviews</span>
           </div>
-          <h2 className="instagram-title">Follow Our Journey</h2>
+          <h2 className="instagram-title">See What Our Customers Love</h2>
           <p className="instagram-description">
-            Join our community on Instagram for daily inspiration,
-            behind-the-scenes glimpses, and exclusive previews of new
-            collections.
+            Real reviews from our amazing customers showcasing their beautiful
+            handmade crochet pieces. Watch and explore their experiences!
           </p>
         </motion.div>
 
-        {/* Instagram Grid */}
-        <div className="instagram-grid">
-          {instagramImages.map((image, index) => (
-            <motion.a
-              key={index}
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
-              className="instagram-image-link"
-            >
-              <img
-                src={image}
-                alt={`Instagram post ${index + 1}`}
-                className="instagram-image"
-              />
-              <div className="instagram-overlay">
-                <Share2 className="instagram-overlay-icon" />
-              </div>
-            </motion.a>
-          ))}
+        {/* Continuous Auto-Sliding Gallery */}
+        <div className="review-slider-wrapper">
+          <div className="review-slider-track">
+            {/* Duplicate the array for seamless infinite loop */}
+            {[...reviewMedia, ...reviewMedia, ...reviewMedia].map(
+              (media, index) => (
+                <motion.div
+                  key={index}
+                  className="review-slide"
+                  onClick={() => openModal(index % reviewMedia.length)}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {media.type === "image" ? (
+                    <img
+                      src={media.src}
+                      alt={`Customer review ${index + 1}`}
+                      className="review-media"
+                    />
+                  ) : (
+                    <div className="review-video-wrapper">
+                      <video
+                        src={media.src}
+                        className="review-media"
+                        muted
+                        playsInline
+                      />
+                      <div className="review-play-overlay">
+                        <Play className="review-play-icon" />
+                      </div>
+                    </div>
+                  )}
+                </motion.div>
+              ),
+            )}
+          </div>
         </div>
 
         {/* Follow Button */}
@@ -71,7 +157,7 @@ const InstagramSection = () => {
           className="instagram-follow"
         >
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/crochetic_by_sowmya/"
             target="_blank"
             rel="noopener noreferrer"
             className="instagram-follow-btn"
@@ -81,6 +167,70 @@ const InstagramSection = () => {
           </a>
         </motion.div>
       </div>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {modalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="review-modal-overlay"
+            onClick={closeModal}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="review-modal-content"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button className="review-modal-close" onClick={closeModal}>
+                <X />
+              </button>
+
+              {/* Navigation Buttons */}
+              <button
+                className="review-modal-nav review-modal-prev"
+                onClick={goToPrev}
+              >
+                <ChevronLeft />
+              </button>
+              <button
+                className="review-modal-nav review-modal-next"
+                onClick={goToNext}
+              >
+                <ChevronRight />
+              </button>
+
+              {/* Media Display */}
+              <div className="review-modal-media">
+                {reviewMedia[currentIndex].type === "image" ? (
+                  <img
+                    src={reviewMedia[currentIndex].src}
+                    alt={`Review ${currentIndex + 1}`}
+                    className="review-modal-img"
+                  />
+                ) : (
+                  <video
+                    ref={videoRef}
+                    src={reviewMedia[currentIndex].src}
+                    controls
+                    autoPlay
+                    className="review-modal-video"
+                  />
+                )}
+              </div>
+
+              {/* Counter */}
+              <div className="review-modal-counter">
+                {currentIndex + 1} / {reviewMedia.length}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
