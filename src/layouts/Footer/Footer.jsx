@@ -194,14 +194,14 @@ const Footer = () => {
             creativity.
           </p>
           <p className="footer-made-with-love">
-            Designed & Developed by | {" "}
+            Designed & Developed by |{" "}
             <a
               href="https://narayan-mestry.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="developer-link"
             >
-              Nobita Mestryyyyy
+              Nobita Mestry
             </a>
           </p>
           {/* <div className="footer-legal-links">
