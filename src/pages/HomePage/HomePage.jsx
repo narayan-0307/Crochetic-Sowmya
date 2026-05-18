@@ -18,7 +18,7 @@ const HomePage = () => {
       <StorySection />
       <TestimonialsSection />
       <InstagramSection />
-      <Newsletter />
+      {/* <Newsletter /> */}
     </div>
   );
 };

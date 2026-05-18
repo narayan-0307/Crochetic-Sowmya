@@ -16,7 +16,7 @@ At Crochetic by Sowmya, every piece is thoughtfully handcrafted to celebrate cre
     author: "Sowmya",
     date: "2026-04-15",
     category: "Tutorials",
-    image: new URL("../assets/blogs/crochetic-blog-1.jpg", import.meta.url)
+    image: new URL("../assets/blogs/crochetic-blog-1.webp", import.meta.url)
       .href,
     readTime: "5 min read",
     tags: ["crochet", "handmade", "craftsmanship", "creativity"],
@@ -39,7 +39,7 @@ At Crochetic by Sowmya, we believe handmade décor should feel both elegant and 
     author: "Sowmya",
     date: "2026-04-22",
     category: "Home Decor",
-    image: new URL("../assets/blogs/crochetic-blog-2.jpg", import.meta.url)
+    image: new URL("../assets/blogs/crochetic-blog-2.webp", import.meta.url)
       .href,
     readTime: "4 min read",
     tags: ["home-decor", "cozy", "handmade", "interior"],
@@ -62,7 +62,7 @@ At Crochetic by Sowmya, every crochet creation is designed to celebrate love, ha
     author: "Sowmya",
     date: "2026-04-28",
     category: "Gift Ideas",
-    image: new URL("../assets/blogs/crochetic-blog-3.jpg", import.meta.url)
+    image: new URL("../assets/blogs/crochetic-blog-3.webp", import.meta.url)
       .href,
     readTime: "6 min read",
     tags: ["gifts", "handmade", "crochet-gifts", "personalized"],
@@ -85,7 +85,7 @@ At Crochetic by Sowmya, crochet is more than handmade art — it is a celebratio
     author: "Sowmya",
     date: "2026-05-02",
     category: "Sustainability",
-    image: new URL("../assets/blogs/crochetic-blog-4.jpg", import.meta.url)
+    image: new URL("../assets/blogs/crochetic-blog-4.webp", import.meta.url)
       .href,
     readTime: "5 min read",
     tags: ["crochet", "mindfulness", "creative-living", "handmade"],
@@ -110,7 +110,7 @@ At Crochetic by Sowmya, our handmade accessories are created to celebrate indivi
     author: "Sowmya",
     date: "2026-05-08",
     category: "Tutorials",
-    image: new URL("../assets/blogs/crochetic-blog-5.jpg", import.meta.url)
+    image: new URL("../assets/blogs/crochetic-blog-5.webp", import.meta.url)
       .href,
     readTime: "6 min read",
     tags: ["crochet-fashion", "accessories", "handmade", "style"],

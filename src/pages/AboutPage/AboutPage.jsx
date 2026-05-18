@@ -78,7 +78,7 @@ const AboutPage = () => {
             >
               <div className="about-hero-badge">
                 <Sparkles className="about-hero-badge-icon" />
-                <span className="about-hero-badge-text">Est. 2016</span>
+                <span className="about-hero-badge-text">Est. 2025</span>
               </div>
               <h1 className="about-hero-title">
                 <span className="about-hero-title-gradient">

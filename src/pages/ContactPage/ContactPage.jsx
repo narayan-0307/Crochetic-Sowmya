@@ -86,8 +86,16 @@ ${formData.message}`;
   ];
 
   const socialLinks = [
-    { icon: Share2, name: "Instagram", url: "https://instagram.com" },
-    { icon: MessageCircle, name: "Facebook", url: "https://facebook.com" },
+    {
+      icon: Share2,
+      name: "Instagram",
+      url: "https://www.instagram.com/crochetic_by_sowmya/",
+    },
+    {
+      icon: MessageCircle,
+      name: "WhatsApp",
+      url: "https://wa.me/919136863189",
+    },
   ];
 
   return (

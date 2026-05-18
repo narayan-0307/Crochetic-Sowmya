@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 import Button from "../../common/Button/Button";
 import "./HeroSection.css";
 
-import hero1 from "../../../assets/images/hero-section/hero-image-1.jpeg";
-import hero2 from "../../../assets/images/hero-section/hero-image-2.png";
-import hero3 from "../../../assets/images/hero-section/hero-image-3.png";
-import hero4 from "../../../assets/images/hero-section/hero-image-4.png";
-import hero5 from "../../../assets/images/hero-section/hero-image-5.png";
+import hero1 from "../../../assets/images/hero-section/hero-image-1.webp";
+import hero2 from "../../../assets/images/hero-section/hero-image-2.webp";
+import hero3 from "../../../assets/images/hero-section/hero-image-3.webp";
+import hero4 from "../../../assets/images/hero-section/hero-image-4.webp";
+import hero5 from "../../../assets/images/hero-section/hero-image-5.webp";
 
 const heroImages = [
   { src: hero1, position: "right center" },

@@ -9,7 +9,7 @@ const CartPage = () => {
   const { cartItems, removeFromCart, updateQuantity, clearCart } = useCart();
 
   // WhatsApp configuration
-  const WHATSAPP_NUMBER = "1234567890"; // Replace with your WhatsApp number
+  const WHATSAPP_NUMBER = "+919136863189"; // Replace with your WhatsApp number
 
   const handleWhatsAppContact = () => {
     const itemsList = cartItems

@@ -60,7 +60,7 @@ const TestimonialsPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="testimonials-cta-section">
+      {/* <section className="testimonials-cta-section">
         <div className="testimonials-cta-content">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -79,10 +79,10 @@ const TestimonialsPage = () => {
             </a>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Trust Badges */}
-      <section className="testimonials-trust-section">
+      {/* <section className="testimonials-trust-section">
         <div className="testimonials-trust-content">
           <div className="testimonials-trust-grid">
             {[
@@ -105,7 +105,7 @@ const TestimonialsPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

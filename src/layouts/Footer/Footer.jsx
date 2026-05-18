@@ -194,9 +194,17 @@ const Footer = () => {
             creativity.
           </p>
           <p className="footer-made-with-love">
-            Handcrafted with <Heart className="footer-heart-icon" /> by Sowmya
+            Designed & Developed by | {" "}
+            <a
+              href="https://narayan-mestry.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="developer-link"
+            >
+              Nobita Mestry
+            </a>
           </p>
-          <div className="footer-legal-links">
+          {/* <div className="footer-legal-links">
             <Link to="#" className="footer-legal-link">
               Privacy Policy
             </Link>
@@ -204,7 +212,7 @@ const Footer = () => {
             <Link to="#" className="footer-legal-link">
               Terms of Service
             </Link>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </footer>

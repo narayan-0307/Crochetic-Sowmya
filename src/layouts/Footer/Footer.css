@@ -255,6 +255,15 @@
   color: var(--color-primary-brown);
 }
 
+.developer-link {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.developer-link:hover {
+  text-decoration: underline;
+}
+
 /* ═══════════════════════════════════════════════════════════════════════════
    RESPONSIVE DESIGN
    ═══════════════════════════════════════════════════════════════════════════ */
