@@ -201,7 +201,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="developer-link"
             >
-              Nobita Mestry
+              Nobita Mestryyyyy
             </a>
           </p>
           {/* <div className="footer-legal-links">
