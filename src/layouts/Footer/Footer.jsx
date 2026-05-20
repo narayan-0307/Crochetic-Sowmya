@@ -24,12 +24,12 @@ const Footer = () => {
   ];
 
   const customerService = [
-    { name: "Keychains", path: "/faq" },
-    { name: "Teddy", path: "/faq" },
-    { name: "Bouquet", path: "/contact" },
-    { name: "Hair Accessories", path: "/faq" },
-    { name: "Mobile accessories", path: "/faq" },
-    { name: "Couple sections", path: "/testimonials" },
+    { name: "Keychains", path: "/categories" },
+    { name: "Teddy", path: "/categories" },
+    { name: "Bouquet", path: "/categories" },
+    { name: "Hair Accessories", path: "/categories" },
+    { name: "Bags & Purses", path: "/categories" },
+    { name: "Desk Accessories", path: "/categories" },
   ];
 
   const socialLinks = [

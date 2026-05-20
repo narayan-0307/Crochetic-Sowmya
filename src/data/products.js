@@ -1,416 +1,229 @@
-import product1 from "../assets/images/products/product-1.jpeg";
-import product2 from "../assets/images/products/product-2.jpeg";
-import product3 from "../assets/images/products/product-3.jpeg";
-import product4 from "../assets/images/products/product-4.jpeg";
-import product5 from "../assets/images/products/product-5.jpeg";
-import product6 from "../assets/images/products/product-6.jpeg";
-import product7 from "../assets/images/products/product-7.jpeg";
-import product8 from "../assets/images/products/product-8.jpeg";
-import product9 from "../assets/images/products/product-9.jpeg";
-import product10 from "../assets/images/products/product-10.jpeg";
-import product11 from "../assets/images/products/product-11.jpeg";
-import product12 from "../assets/images/products/product-12.jpeg";
-import product13 from "../assets/images/products/product-13.jpeg";
-import product14 from "../assets/images/products/product-14.jpeg";
-import product15 from "../assets/images/products/product-15.jpeg";
-import product16 from "../assets/images/products/product-16.jpeg";
-import product17 from "../assets/images/products/product-17.jpeg";
-import product18 from "../assets/images/products/product-18.jpeg";
-import product19 from "../assets/images/products/product-19.jpeg";
+import { productMeta, defaultMeta, categoryDescriptions } from "./productMeta";
 
-export const products = [
+/**
+ * Dynamically load all product images using Vite's import.meta.glob
+ * Path pattern: src/assets/products/[Category]/[Product]/[images]
+ */
+const imageModules = import.meta.glob(
+  "../assets/products/**/*.{jpg,jpeg,png,webp}",
   {
-    id: 1,
-    name: "Sky Bloom Crochet Bouquet",
-    description:
-      "A hand-crafted bouquet featuring lilies, tulips, and daisy accents wrapped in soft blue paper for a graceful gift presentation.",
-    price: 49.99,
-    category: "bouquet",
-    images: [product1],
-    rating: 5.0,
-    reviews: 18,
-    inStock: true,
-    featured: true,
-    bestseller: true,
-    tags: ["bouquet", "floral", "gift", "handmade"],
-    colors: ["White", "Yellow", "Sky Blue", "Green"],
-    sizes: ["Standard"],
+    eager: true,
+    import: "default",
   },
-  {
-    id: 2,
-    name: "Teddy Charm Keychain",
-    description:
-      "An adorable crochet teddy keychain finished with a pastel ribbon and beaded strap for a playful everyday accessory.",
-    price: 14.99,
-    category: "keychains",
-    images: [product2],
-    rating: 4.9,
-    reviews: 26,
-    inStock: true,
-    featured: false,
-    bestseller: true,
-    tags: ["teddy", "keychain", "cute", "gift"],
-    colors: ["Caramel", "Blush Pink", "Cream"],
-  },
-  {
-    id: 3,
-    name: "Garden Trail Hair Vine",
-    description:
-      "A long crochet floral vine designed to weave through braids or loose hair with colorful tiny blooms.",
-    price: 19.99,
-    category: "hair-accessories",
-    images: [product3],
-    rating: 4.8,
-    reviews: 12,
-    inStock: true,
-    featured: true,
-    bestseller: false,
-    tags: ["hair vine", "flowers", "festival", "braid"],
-    colors: ["Multicolor", "Green"],
-  },
-  {
-    id: 4,
-    name: "Pastel Cloud Scrunchie Set",
-    description:
-      "A pair of plush crochet scrunchies in baby blue and blush pink with soft scalloped edges.",
-    price: 12.99,
-    category: "hair-accessories",
-    images: [product4],
-    rating: 4.9,
-    reviews: 21,
-    inStock: true,
-    featured: false,
-    bestseller: true,
-    tags: ["scrunchie", "pastel", "hair", "set"],
-    colors: ["Baby Blue", "Blush Pink", "White"],
-    sizes: ["Set of 2"],
-  },
-  {
-    id: 5,
-    name: "Crimson Heart Keychain",
-    description:
-      "A soft crochet heart keychain in a deep crimson shade, perfect for gifting or adding charm to your bag.",
-    price: 9.99,
-    category: "keychains",
-    images: [product5],
-    rating: 4.9,
-    reviews: 34,
-    inStock: true,
-    featured: false,
-    bestseller: true,
-    tags: ["heart", "keychain", "romantic", "mini"],
-    colors: ["Crimson"],
-  },
-  {
-    id: 6,
-    name: "Strawberry Bloom Basket",
-    description:
-      "A whimsical crochet basket with strawberry-inspired florals and a soft pink bow for a cheerful decorative accent.",
-    price: 24.99,
-    category: "teddy",
-    images: [product6],
-    rating: 4.7,
-    reviews: 9,
-    inStock: true,
-    featured: false,
-    bestseller: false,
-    tags: ["basket", "strawberry", "decor", "gift"],
-    colors: ["Red", "Cream", "Green", "Pink"],
-  },
-  {
-    id: 7,
-    name: "Sugar Bow Hair Clip",
-    description:
-      "A soft crochet bow clip in pink and white designed to add a sweet handmade finish to everyday hairstyles.",
-    price: 11.99,
-    category: "hair-accessories",
-    images: [product7],
-    rating: 4.8,
-    reviews: 17,
-    inStock: true,
-    featured: false,
-    bestseller: false,
-    tags: ["bow", "clip", "hair", "cute"],
-    colors: ["Pink", "White"],
-  },
-  {
-    id: 8,
-    name: "Midnight Rose Bouquet",
-    description:
-      "A dramatic single rose bouquet wrapped in black paper with golden ribbon for a bold romantic statement.",
-    price: 29.99,
-    category: "bouquet",
-    images: [product8],
-    rating: 4.9,
-    reviews: 15,
-    inStock: true,
-    featured: true,
-    bestseller: false,
-    tags: ["rose", "bouquet", "romantic", "gift"],
-    colors: ["Red", "Green", "Black", "Gold"],
-    sizes: ["Single Stem Bouquet"],
-  },
-  {
-    id: 9,
-    name: "Sunflower Bookmark",
-    description:
-      "A smiling sunflower crochet bookmark with leafy tassels that brightens journals, planners, and gift books.",
-    price: 8.99,
-    category: "bookmark",
-    images: [product9],
-    rating: 4.8,
-    reviews: 23,
-    inStock: true,
-    featured: false,
-    bestseller: true,
-    tags: ["bookmark", "sunflower", "gift", "reader"],
-    colors: ["Yellow", "Brown", "Green"],
-  },
-  {
-    id: 10,
-    name: "Memory Tulip Bouquet",
-    description:
-      "A personalized tulip bouquet styled with photo keepsakes for birthdays, celebrations, and custom surprise gifts.",
-    price: 54.99,
-    category: "bouquet",
-    images: [product10],
-    rating: 5.0,
-    reviews: 11,
-    inStock: true,
-    featured: true,
-    bestseller: true,
-    tags: ["tulip", "personalized", "bouquet", "gift"],
-    colors: ["Pink", "Gold", "Green"],
-    sizes: ["Custom Bouquet"],
-  },
-  {
-    id: 11,
-    name: "Seaside Tulip Bouquet",
-    description:
-      "A bright pink tulip bouquet wrapped in blush and gold, designed as a cheerful handmade keepsake.",
-    price: 39.99,
-    category: "bouquet",
-    images: [product11],
-    rating: 4.9,
-    reviews: 14,
-    inStock: true,
-    featured: false,
-    bestseller: true,
-    tags: ["tulip", "bouquet", "pink", "gift"],
-    colors: ["Pink", "Gold", "Green"],
-  },
-  {
-    id: 12,
-    name: "Evil Eye Heart Charm",
-    description:
-      "A crochet heart charm inspired by evil-eye colors, finished with a gold-tone keyring for bags or keys.",
-    price: 10.99,
-    category: "keychains",
-    images: [product12],
-    rating: 4.7,
-    reviews: 16,
-    inStock: true,
-    featured: false,
-    bestseller: false,
-    tags: ["evil eye", "heart", "charm", "keychain"],
-    colors: ["Teal", "Yellow", "Black", "Green"],
-  },
-  {
-    id: 13,
-    name: "Rose Stem Duo",
-    description:
-      "A pair of delicate crochet rose stems in lavender and cream, ideal for minimalist gifting and display.",
-    price: 18.99,
-    category: "bouquet",
-    images: [product13],
-    rating: 4.8,
-    reviews: 10,
-    inStock: true,
-    featured: false,
-    bestseller: false,
-    tags: ["rose", "stems", "minimal", "gift"],
-    colors: ["Lavender", "White", "Green"],
-    sizes: ["Set of 2"],
-  },
-  {
-    id: 14,
-    name: "Sunflower Drawstring Bag",
-    description:
-      "A roomy crochet drawstring bag topped with sunflower details, made to bring handmade charm to everyday carry.",
-    price: 34.99,
-    category: "sling-bags-handbags",
-    images: [product14],
-    rating: 4.9,
-    reviews: 13,
-    inStock: true,
-    featured: true,
-    bestseller: false,
-    tags: ["bag", "sunflower", "drawstring", "wearable"],
-    colors: ["Cream", "Yellow", "Brown", "Green"],
-  },
-  {
-    id: 15,
-    name: "Mini Love Keepsake Set",
-    description:
-      "A charming assorted set of tiny hearts, floral accents, and mini keepsakes for gifting, styling, or collecting.",
-    price: 16.99,
-    category: "table-accessories",
-    images: [product15],
-    rating: 4.8,
-    reviews: 19,
-    inStock: true,
-    featured: false,
-    bestseller: false,
-    tags: ["gift set", "hearts", "flowers", "mini"],
-    colors: ["Pink", "White", "Yellow", "Purple", "Red"],
-    sizes: ["Gift Set"],
-  },
-  {
-    id: 16,
-    name: "Noir Tulip Bouquet",
-    description:
-      "A three-tulip crochet bouquet wrapped in black and gold for a modern, elevated floral gift.",
-    price: 44.99,
-    category: "bouquet",
-    images: [product16],
-    rating: 5.0,
-    reviews: 8,
-    inStock: true,
-    featured: true,
-    bestseller: false,
-    tags: ["tulip", "bouquet", "modern", "gift"],
-    colors: ["Red", "Lavender", "Black", "Gold"],
-  },
-  {
-    id: 17,
-    name: "Lavender Stem Trio",
-    description:
-      "A trio of textured lavender-inspired stems that adds color and softness to desks, vases, or handmade bundles.",
-    price: 17.99,
-    category: "bouquet",
-    images: [product17],
-    rating: 4.7,
-    reviews: 7,
-    inStock: true,
-    featured: false,
-    bestseller: false,
-    tags: ["lavender", "stems", "floral", "decor"],
-    colors: ["Lavender", "Pink", "Mocha", "Plum"],
-    sizes: ["Set of 3"],
-  },
-  {
-    id: 18,
-    name: "Garden Edge Headband",
-    description:
-      "A soft crochet headband with a floral-inspired trim for a light and comfortable handmade finish.",
-    price: 13.99,
-    category: "hair-accessories",
-    images: [product18],
-    rating: 4.8,
-    reviews: 12,
-    inStock: true,
-    featured: false,
-    bestseller: false,
-    tags: ["headband", "hair", "floral", "wearable"],
-    colors: ["White", "Blush", "Green"],
-  },
-  {
-    id: 19,
-    name: "Jasmine Braid Garland",
-    description:
-      "A cascading crochet jasmine garland created for braids, festive styling, and special occasions.",
-    price: 22.99,
-    category: "hair-accessories",
-    images: [product19],
-    rating: 4.9,
-    reviews: 9,
-    inStock: true,
-    featured: true,
-    bestseller: false,
-    tags: ["jasmine", "braid", "garland", "festive"],
-    colors: ["White", "Green"],
-  },
-];
+);
 
-export const categories = [
-  {
-    id: 1,
-    name: "Keychains",
-    slug: "keychains",
-    description: "Adorable crochet keychains and charms for keys and bags",
-    image: product2,
-    productCount: 3,
-  },
-  {
-    id: 2,
-    name: "Teddy",
-    slug: "teddy",
-    description: "Cute handcrafted teddy bears and soft toys",
-    image: product6,
-    productCount: 1,
-  },
-  {
-    id: 3,
-    name: "Bouquet",
-    slug: "bouquet",
-    description: "Beautiful handcrafted floral bouquets for all occasions",
-    image: product1,
-    productCount: 7,
-  },
-  {
-    id: 4,
-    name: "Hair Accessories",
-    slug: "hair-accessories",
-    description: "Stylish crochet hair clips, scrunchies, and accessories",
-    image: product3,
-    productCount: 5,
-  },
-  {
-    id: 5,
-    name: "All sizes sling bags/handbags",
-    slug: "sling-bags-handbags",
-    description: "Handcrafted crochet bags in all sizes for every occasion",
-    image: product14,
-    productCount: 1,
-  },
-  {
-    id: 6,
-    name: "Mobile accessories",
-    slug: "mobile-accessories",
-    description: "Trendy crochet mobile covers, holders, and accessories",
-    image: product5,
-    productCount: 0,
-  },
-  {
-    id: 7,
-    name: "Bookmark",
-    slug: "bookmark",
-    description: "Unique handmade crochet bookmarks for book lovers",
-    image: product9,
-    productCount: 1,
-  },
-  {
-    id: 8,
-    name: "Gifts for men",
-    slug: "gifts-for-men",
-    description: "Thoughtful crochet gifts specially curated for men",
-    image: product8,
-    productCount: 0,
-  },
-  {
-    id: 9,
-    name: "Table accessories",
-    slug: "table-accessories",
-    description: "Elegant crochet coasters, runners, and table decorations",
-    image: product15,
-    productCount: 1,
-  },
-  {
-    id: 10,
-    name: "Couple sections",
-    slug: "couple-sections",
-    description: "Romantic crochet gifts perfect for couples",
-    image: product11,
-    productCount: 0,
-  },
-];
+/**
+ * Utility: Convert text to slug format
+ * Example: "Flowers & Bouquets" -> "flowers-bouquets"
+ */
+const toSlug = (text) => {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "") // Remove special characters
+    .replace(/[\s_-]+/g, "-") // Replace spaces with hyphens
+    .replace(/^-+|-+$/g, ""); // Remove leading/trailing hyphens
+};
+
+/**
+ * Utility: Parse folder structure from image path
+ * Path format: ../assets/products/[Category]/[Product]/[image.jpg]
+ */
+const parseImagePath = (path) => {
+  // Remove ../assets/products/ prefix
+  const relativePath = path.replace("../assets/products/", "");
+  const parts = relativePath.split("/");
+
+  if (parts.length < 3) {
+    console.warn(`Invalid image path structure: ${path}`);
+    return null;
+  }
+
+  return {
+    category: parts[0], // e.g., "Flowers & Bouquets"
+    productName: parts[1], // e.g., "Blue Small Lilly"
+    imageName: parts[2], // e.g., "1.jpg"
+    fullPath: path,
+  };
+};
+
+/**
+ * Group images by category and product
+ */
+const groupImagesByProduct = () => {
+  const productsMap = new Map();
+
+  Object.entries(imageModules).forEach(([path, imageUrl]) => {
+    const parsed = parseImagePath(path);
+    if (!parsed) return;
+
+    const { category, productName } = parsed;
+    const categorySlug = toSlug(category);
+    const productSlug = toSlug(productName);
+    const productKey = `${categorySlug}/${productSlug}`;
+
+    if (!productsMap.has(productKey)) {
+      productsMap.set(productKey, {
+        category,
+        categorySlug,
+        productName,
+        productSlug,
+        images: [],
+      });
+    }
+
+    productsMap.get(productKey).images.push(imageUrl);
+  });
+
+  return productsMap;
+};
+
+/**
+ * Generate products array with metadata
+ */
+const generateProducts = () => {
+  const productsMap = groupImagesByProduct();
+  const productsArray = [];
+  let productId = 1;
+
+  productsMap.forEach((productData, productKey) => {
+    const { category, categorySlug, productName, productSlug, images } =
+      productData;
+
+    // Get metadata from productMeta.js or use defaults
+    const meta = productMeta[productKey] || {};
+    const merged = { ...defaultMeta, ...meta };
+
+    // Sort images by filename (1.jpg, 2.jpg, etc.)
+    const sortedImages = images.sort((a, b) => {
+      const aNum = parseInt(a.match(/(\d+)\.\w+$/)?.[1] || "0");
+      const bNum = parseInt(b.match(/(\d+)\.\w+$/)?.[1] || "0");
+      return aNum - bNum;
+    });
+
+    productsArray.push({
+      id: productId++,
+      name: productName,
+      slug: productSlug,
+      category: categorySlug,
+      categoryName: category,
+      images: sortedImages,
+      description: merged.description,
+      price: merged.price,
+      rating: merged.rating,
+      reviews: merged.reviews,
+      inStock: merged.inStock,
+      featured: merged.featured,
+      bestseller: merged.bestseller,
+      tags: merged.tags,
+      colors: merged.colors,
+      sizes: merged.sizes,
+    });
+  });
+
+  // Sort products: featured first, then by id
+  return productsArray.sort((a, b) => {
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    return a.id - b.id;
+  });
+};
+
+/**
+ * Generate categories array with product counts
+ */
+const generateCategories = () => {
+  const categoryMap = new Map();
+
+  // Collect all unique categories from products
+  products.forEach((product) => {
+    const { category, categoryName, images } = product;
+
+    if (!categoryMap.has(category)) {
+      categoryMap.set(category, {
+        name: categoryName,
+        slug: category,
+        productCount: 0,
+        image: null, // Will use first product image
+      });
+    }
+
+    const cat = categoryMap.get(category);
+    cat.productCount++;
+
+    // Use first product's first image as category image
+    if (!cat.image && images.length > 0) {
+      cat.image = images[0];
+    }
+  });
+
+  const categoriesArray = [];
+  let categoryId = 1;
+
+  categoryMap.forEach((categoryData, slug) => {
+    categoriesArray.push({
+      id: categoryId++,
+      name: categoryData.name,
+      slug: categoryData.slug,
+      description:
+        categoryDescriptions[slug] ||
+        `Handcrafted ${categoryData.name.toLowerCase()} products`,
+      image: categoryData.image,
+      productCount: categoryData.productCount,
+    });
+  });
+
+  // Sort alphabetically by name
+  return categoriesArray.sort((a, b) => a.name.localeCompare(b.name));
+};
+
+/**
+ * Export products and categories
+ */
+export const products = generateProducts();
+export const categories = generateCategories();
+
+/**
+ * Utility functions for filtering and searching
+ */
+
+// Get products by category slug
+export const getProductsByCategory = (categorySlug) => {
+  return products.filter((product) => product.category === categorySlug);
+};
+
+// Get featured products
+export const getFeaturedProducts = () => {
+  return products.filter((product) => product.featured);
+};
+
+// Get bestseller products
+export const getBestsellerProducts = () => {
+  return products.filter((product) => product.bestseller);
+};
+
+// Get product by ID
+export const getProductById = (id) => {
+  return products.find((product) => product.id === id);
+};
+
+// Get product by slug
+export const getProductBySlug = (slug) => {
+  return products.find((product) => product.slug === slug);
+};
+
+// Get category by slug
+export const getCategoryBySlug = (slug) => {
+  return categories.find((category) => category.slug === slug);
+};
+
+// Search products by name or tags
+export const searchProducts = (query) => {
+  const lowerQuery = query.toLowerCase();
+  return products.filter(
+    (product) =>
+      product.name.toLowerCase().includes(lowerQuery) ||
+      product.tags.some((tag) => tag.toLowerCase().includes(lowerQuery)) ||
+      product.description.toLowerCase().includes(lowerQuery),
+  );
+};

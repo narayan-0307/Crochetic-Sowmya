@@ -3,6 +3,7 @@ import FeaturedProducts from "../../components/home/FeaturedProducts/FeaturedPro
 import CategoriesSection from "../../components/home/CategoriesSection/CategoriesSection.jsx";
 import BestSellers from "../../components/home/BestSellers/BestSellers.jsx";
 import StorySection from "../../components/home/StorySection/StorySection.jsx";
+import SuccessStoriesSection from "../../components/home/SuccessStoriesSection/SuccessStoriesSection.jsx";
 import TestimonialsSection from "../../components/home/TestimonialsSection/TestimonialsSection.jsx";
 import InstagramSection from "../../components/home/InstagramSection/InstagramSection.jsx";
 import Newsletter from "../../components/common/Newsletter/Newsletter.jsx";
@@ -16,6 +17,7 @@ const HomePage = () => {
       <CategoriesSection />
       <BestSellers />
       <StorySection />
+      <SuccessStoriesSection />
       <TestimonialsSection />
       <InstagramSection />
       {/* <Newsletter /> */}

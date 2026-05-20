@@ -7,13 +7,41 @@ import ProductCard from "../../common/ProductCard/ProductCard";
 import { products } from "../../../data/products";
 import "./FeaturedProducts.css";
 
+import Products1 from "../../../assets/images/home-products/crochetic-design-1.jpeg";
+import Products2 from "../../../assets/images/home-products/crochetic-design-2.jpeg";
+import Products3 from "../../../assets/images/home-products/crochetic-design-3.jpeg";
+import Products4 from "../../../assets/images/home-products/crochetic-design-4.jpeg";
+import Products5 from "../../../assets/images/home-products/crochetic-design-5.jpeg";
+import Products6 from "../../../assets/images/home-products/crochetic-design-6.jpeg";
+import Products7 from "../../../assets/images/home-products/crochetic-design-7.jpeg";
+import Products8 from "../../../assets/images/home-products/crochetic-design-8.jpeg";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const FeaturedProducts = () => {
-  const featuredProducts = products.filter((p) => p.featured);
+  // Map of product names to featured images from home-products folder
+  const featuredImageMap = {
+    "Bible Cover": Products1,
+    "Heart Keychain": Products2,
+    "From Sling Bag to Sunflower Bouquet  2 in 1": Products3,
+    "Single Medium size Sunflower with Smiley": Products4,
+    "Pink Tulip Bouquet With Chocolate and Custom Message": Products5,
+    "Sunflower Keychain": Products6,
+    "Lavender Flowers": Products7,
+    "Floral Crown": Products8,
+  };
+
+  // Get actual products from database and override their first image for display
+  const featuredProducts = products
+    .filter((product) => featuredImageMap[product.name])
+    .map((product) => ({
+      ...product,
+      images: [featuredImageMap[product.name], ...product.images.slice(1)],
+    }))
+    .slice(0, 8);
 
   return (
     <section className="featured-products-section">

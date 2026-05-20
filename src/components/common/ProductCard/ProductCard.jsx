@@ -73,11 +73,11 @@ const ProductCard = ({ product, index = 0 }) => {
                   Featured
                 </span>
               )}
-              {!product.inStock && (
+              {/* {!product.inStock && (
                 <span className="product-badge product-badge-sold-out">
                   Sold Out
                 </span>
-              )}
+              )} */}
             </div>
 
             <div className="product-card-hover-actions">

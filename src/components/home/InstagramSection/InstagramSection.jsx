@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from "react";
 import "./InstagramSection.css";
 
 // Import all review images and videos
-import review1 from "../../../assets/images/reviews/reviews-1.jpg";
 import review2 from "../../../assets/images/reviews/reviews-2.mp4";
 import review3 from "../../../assets/images/reviews/reviews-3.mp4";
 import review4 from "../../../assets/images/reviews/reviews-4.mp4";
@@ -14,18 +13,24 @@ import review7 from "../../../assets/images/reviews/reviews-7.mp4";
 import review8 from "../../../assets/images/reviews/reviews-8.mp4";
 import review9 from "../../../assets/images/reviews/reviews-9.mp4";
 import review10 from "../../../assets/images/reviews/reviews-10.mp4";
-import review11 from "../../../assets/images/reviews/reviews-11.jpeg";
-import review12 from "../../../assets/images/reviews/reviews-12.jpeg";
-import review13 from "../../../assets/images/reviews/reviews-13.jpeg";
-import review14 from "../../../assets/images/reviews/reviews-14.jpeg";
-import review15 from "../../../assets/images/reviews/reviews-15.jpeg";
-import review16 from "../../../assets/images/reviews/reviews-16.jpeg";
-import review17 from "../../../assets/images/reviews/reviews-17.jpeg";
-import review18 from "../../../assets/images/reviews/reviews-18.jpeg";
+
+import feedback1 from "../../../assets/images/reviews/feedback-1.mp4";
+import feedback2 from "../../../assets/images/reviews/feedback-2.mp4";
+import feedback3 from "../../../assets/images/reviews/feedback-3.mp4";
+import feedback4 from "../../../assets/images/reviews/feedback-4.mp4";
+import feedback5 from "../../../assets/images/reviews/feedback-5.mp4";
+import feedback6 from "../../../assets/images/reviews/feedback-6.mp4";
+import feedback7 from "../../../assets/images/reviews/feedback-7.mp4";
+import feedback8 from "../../../assets/images/reviews/feedback-8.mp4";
+import feedback9 from "../../../assets/images/reviews/feedback-9.mp4";
+import feedback10 from "../../../assets/images/reviews/feedback-10.mp4";
+import feedback11 from "../../../assets/images/reviews/feedback-11.mp4";
+import feedback12 from "../../../assets/images/reviews/feedback-12.mp4";
+import feedback13 from "../../../assets/images/reviews/feedback-13.mp4";
 
 const InstagramSection = () => {
   const reviewMedia = [
-    { src: review1, type: "image" },
+    { src: feedback1, type: "video" },
     { src: review2, type: "video" },
     { src: review3, type: "video" },
     { src: review4, type: "video" },
@@ -35,14 +40,18 @@ const InstagramSection = () => {
     { src: review8, type: "video" },
     { src: review9, type: "video" },
     { src: review10, type: "video" },
-    { src: review11, type: "image" },
-    { src: review12, type: "image" },
-    { src: review13, type: "image" },
-    { src: review14, type: "image" },
-    { src: review15, type: "image" },
-    { src: review16, type: "image" },
-    { src: review17, type: "image" },
-    { src: review18, type: "image" },
+    { src: feedback2, type: "video" },
+    { src: feedback3, type: "video" },
+    { src: feedback4, type: "video" },
+    { src: feedback5, type: "video" },
+    { src: feedback6, type: "video" },
+    { src: feedback7, type: "video" },
+    { src: feedback8, type: "video" },
+    { src: feedback9, type: "video" },
+    { src: feedback10, type: "video" },
+    { src: feedback11, type: "video" },
+    { src: feedback12, type: "video" },
+    { src: feedback13, type: "video" },
   ];
 
   const [modalOpen, setModalOpen] = useState(false);
