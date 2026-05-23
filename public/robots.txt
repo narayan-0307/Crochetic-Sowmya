@@ -1,0 +1,12 @@
+# Robots.txt for Crochetic by Sowmya
+# https://crocheticbysowmya.com
+
+User-agent: *
+Allow: /
+
+# Disallow user-specific pages
+Disallow: /cart
+Disallow: /wishlist
+
+# Sitemap location
+Sitemap: https://crocheticbysowmya.com/sitemap.xml
