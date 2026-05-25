@@ -12,9 +12,10 @@ import Products2 from "../../../assets/images/home-products/crochetic-design-2.j
 import Products3 from "../../../assets/images/home-products/crochetic-design-3.jpeg";
 import Products4 from "../../../assets/images/home-products/crochetic-design-4.jpeg";
 import Products5 from "../../../assets/images/home-products/crochetic-design-5.jpeg";
-import Products6 from "../../../assets/images/home-products/crochetic-design-6.jpeg";
+import Products6 from "../../../assets/images/home-products/crochetic-design-6.webp";
 import Products7 from "../../../assets/images/home-products/crochetic-design-7.jpeg";
 import Products8 from "../../../assets/images/home-products/crochetic-design-8.jpeg";
+import Products9 from "../../../assets/images/home-products/crochetic-design-8.jpeg";
 
 // Import Swiper styles
 import "swiper/css";

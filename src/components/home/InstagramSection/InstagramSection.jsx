@@ -18,13 +18,13 @@ import feedback1 from "../../../assets/images/reviews/feedback-1.mp4";
 import feedback2 from "../../../assets/images/reviews/feedback-2.mp4";
 import feedback3 from "../../../assets/images/reviews/feedback-3.mp4";
 import feedback4 from "../../../assets/images/reviews/feedback-4.mp4";
-import feedback5 from "../../../assets/images/reviews/feedback-5.mp4";
+// import feedback5 from "../../../assets/images/reviews/feedback-5.mp4";
 import feedback6 from "../../../assets/images/reviews/feedback-6.mp4";
 import feedback7 from "../../../assets/images/reviews/feedback-7.mp4";
-import feedback8 from "../../../assets/images/reviews/feedback-8.mp4";
-import feedback9 from "../../../assets/images/reviews/feedback-9.mp4";
+// import feedback8 from "../../../assets/images/reviews/feedback-8.mp4";
+// import feedback9 from "../../../assets/images/reviews/feedback-9.mp4";
 import feedback10 from "../../../assets/images/reviews/feedback-10.mp4";
-import feedback11 from "../../../assets/images/reviews/feedback-11.mp4";
+// import feedback11 from "../../../assets/images/reviews/feedback-11.mp4";
 import feedback12 from "../../../assets/images/reviews/feedback-12.mp4";
 import feedback13 from "../../../assets/images/reviews/feedback-13.mp4";
 
@@ -43,13 +43,13 @@ const InstagramSection = () => {
     { src: feedback2, type: "video" },
     { src: feedback3, type: "video" },
     { src: feedback4, type: "video" },
-    { src: feedback5, type: "video" },
+    // { src: feedback5, type: "video" },
     { src: feedback6, type: "video" },
     { src: feedback7, type: "video" },
-    { src: feedback8, type: "video" },
-    { src: feedback9, type: "video" },
+    // { src: feedback8, type: "video" },
+    // { src: feedback9, type: "video" },
     { src: feedback10, type: "video" },
-    { src: feedback11, type: "video" },
+    // { src: feedback11, type: "video" },
     { src: feedback12, type: "video" },
     { src: feedback13, type: "video" },
   ];
@@ -112,7 +112,7 @@ const InstagramSection = () => {
             <Share2 className="instagram-badge-icon" />
             <span className="instagram-badge-text">Customer Reviews</span>
           </div>
-          <h2 className="instagram-title">See What Our Customers Love</h2>
+          <h2 className="instagram-title"></h2>
           <p className="instagram-description">
             Real reviews from our amazing customers showcasing their beautiful
             handmade crochet pieces. Watch and explore their experiences!
