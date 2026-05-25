@@ -35,7 +35,7 @@ const parseImagePath = (path) => {
   const parts = relativePath.split("/");
 
   if (parts.length < 3) {
-    console.warn(`Invalid image path structure: ${path}`);
+    console.warn(`Invalid image path structurerr: ${path}`);
     return null;
   }
 
