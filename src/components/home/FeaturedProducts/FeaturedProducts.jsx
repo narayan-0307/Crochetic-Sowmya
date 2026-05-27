@@ -7,15 +7,15 @@ import ProductCard from "../../common/ProductCard/ProductCard";
 import { products } from "../../../data/products";
 import "./FeaturedProducts.css";
 
-import Products1 from "../../../assets/images/home-products/crochetic-design-1.jpeg";
-import Products2 from "../../../assets/images/home-products/crochetic-design-2.jpeg";
-import Products3 from "../../../assets/images/home-products/crochetic-design-3.jpeg";
-import Products4 from "../../../assets/images/home-products/crochetic-design-4.jpeg";
-import Products5 from "../../../assets/images/home-products/crochetic-design-5.jpeg";
+import Products1 from "../../../assets/images/home-products/crochetic-design-1.webp";
+import Products2 from "../../../assets/images/home-products/crochetic-design-2.webp";
+import Products3 from "../../../assets/images/home-products/crochetic-design-3.webp";
+import Products4 from "../../../assets/images/home-products/crochetic-design-4.webp";
+import Products5 from "../../../assets/images/home-products/crochetic-design-5.webp";
 import Products6 from "../../../assets/images/home-products/crochetic-design-6.webp";
-import Products7 from "../../../assets/images/home-products/crochetic-design-7.jpeg";
-import Products8 from "../../../assets/images/home-products/crochetic-design-8.jpeg";
-import Products9 from "../../../assets/images/home-products/crochetic-design-8.jpeg";
+import Products7 from "../../../assets/images/home-products/crochetic-design-7.webp";
+import Products8 from "../../../assets/images/home-products/crochetic-design-8.webp";
+import Products9 from "../../../assets/images/home-products/crochetic-design-9.webp";
 
 // Import Swiper styles
 import "swiper/css";
@@ -33,6 +33,7 @@ const FeaturedProducts = () => {
     "Sunflower Keychain": Products6,
     "Lavender Flowers": Products7,
     "Floral Crown": Products8,
+    "Mr Beans Teddy": Products9,
   };
 
   // Get actual products from database and override their first image for display
@@ -42,7 +43,7 @@ const FeaturedProducts = () => {
       ...product,
       images: [featuredImageMap[product.name], ...product.images.slice(1)],
     }))
-    .slice(0, 8);
+    .slice(0, 9);
 
   return (
     <section className="featured-products-section">

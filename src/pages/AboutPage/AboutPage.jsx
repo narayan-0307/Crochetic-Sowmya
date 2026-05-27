@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Heart, Users, Leaf, Award, Target, Sparkles } from "lucide-react";
 import "./AboutPage.css";
-import AboutImage from "../../assets/about-image.jpg";
+import AboutImage from "../../assets/about-image.webp";
 
 const AboutPage = () => {
   const values = [

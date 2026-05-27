@@ -4,10 +4,10 @@ import { Heart, Award, Leaf, Users } from "lucide-react";
 import Button from "../../common/Button/Button";
 import "./StorySection.css";
 
-import product4 from "../../../assets/images/products/product-4.jpeg";
-import product10 from "../../../assets/images/products/product-10.jpeg";
-import product12 from "../../../assets/images/home-products/crochetic-design-5.jpeg";
-import product18 from "../../../assets/images/products/product-2.jpeg";
+import product4 from "../../../assets/images/products/product-4.webp";
+import product10 from "../../../assets/images/products/product-10.webp";
+import product12 from "../../../assets/images/home-products/crochetic-design-5.webp";
+import product18 from "../../../assets/images/products/product-2.webp";
 
 const StorySection = () => {
   const features = [

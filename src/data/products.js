@@ -94,10 +94,20 @@ const generateProducts = () => {
     const meta = productMeta[productKey] || {};
     const merged = { ...defaultMeta, ...meta };
 
-    // Sort images by filename (1.jpg, 2.jpg, etc.)
+    // Sort images by numeric filename (1.jpg, 2.jpg, etc.)
+    // Extract the first number found in the filename for reliable sorting
     const sortedImages = images.sort((a, b) => {
-      const aNum = parseInt(a.match(/(\d+)\.\w+$/)?.[1] || "0");
-      const bNum = parseInt(b.match(/(\d+)\.\w+$/)?.[1] || "0");
+      // Extract filename without path
+      const aName = a.split("/").pop();
+      const bName = b.split("/").pop();
+
+      // Extract the first number from filename (handles 1.webp, image-1.webp, etc.)
+      const aMatch = aName.match(/(\d+)/);
+      const bMatch = bName.match(/(\d+)/);
+
+      const aNum = aMatch ? parseInt(aMatch[1]) : 0;
+      const bNum = bMatch ? parseInt(bMatch[1]) : 0;
+
       return aNum - bNum;
     });
 
